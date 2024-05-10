@@ -1,0 +1,24 @@
+.scrole {
+  background-color: #f2f6f6;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #0e82fd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 80%;
+  right: 5%;
+  cursor: pointer;
+  /* display: block; */
+}
+.scrole i {
+  color: #0e82fd;
+  font-size: 17px;
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}

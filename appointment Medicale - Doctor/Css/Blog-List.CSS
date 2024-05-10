@@ -1,0 +1,994 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > header > img {
+  width: 55px;
+  margin: 10px;
+}
+body {
+  background-color: #ffffff;
+  height: 1500vh;
+  position: relative;
+}
+header {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+
+/* ! main start ............................................................................................................ */
+
+/* ! Section Blog List  Start  */
+
+main .BBlog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+  background-color: #f2f6f6;
+}
+main .BBlog h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+main .BBlog h5 {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body main .BBlog a {
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 20px;
+  color: #007fff;
+}
+/* ! Section Blog List End    */
+
+/* ! Section  Blog Start  */
+.Blog-Genarle {
+  height: 1000vh;
+}
+main .Blog-Genarle {
+  /* position: relative; */
+  height: fit-content;
+}
+body > main > section.Blog-Genarle > h1 {
+  background-color: #007fff;
+  padding: 20px;
+  margin-top: 10px;
+  /* position: sticky; */
+  top: 15%;
+}
+main .Blog-Genarle {
+  height: 550px;
+  padding: 35px;
+}
+body > main > section.Blog-Genarle > h1 {
+  text-align: center;
+  font-size: 48px;
+}
+body > main > section.Blog-Genarle > p {
+  text-align: center;
+  color: #007fff;
+  font-size: 23px;
+  font-weight: 550;
+}
+body > main > section.Blog-Genarle > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+body > main > section.Blog-Genarle > ul > li {
+  width: 25%;
+  padding: 15px;
+}
+.Container-Card-Blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > p > img {
+  width: 50px;
+  height: 52px;
+  border-radius: 50%;
+}
+body > main > section.Blog-Genarle > ul > li > div > img {
+  margin-bottom: 10px;
+}
+body > main > section.Blog-Genarle > ul > li:nth-child(2) > div > img {
+  height: 150%;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > div > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > div > p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 15px !important;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > div > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #007fff;
+  font-weight: 600;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 23px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li
+  > div
+  > div
+  > p
+  > span:nth-child(3) {
+  background-color: #0cbcda;
+  padding: 10px;
+  border-radius: 6px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li:nth-child(4)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 7px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul
+  > li
+  > div
+  > div
+  > p
+  > span:nth-child(2) {
+  color: #1f2937;
+  font-size: 16px;
+  color: rgba(112, 128, 144);
+}
+
+body > main > section.Blog-Genarle > ul > li > div > img {
+  height: 205px !important;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(3)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(3)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 10px !important;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(3)
+  > li:nth-child(4)
+  > div
+  > div
+  > div
+  > p {
+  margin-bottom: 7px !important;
+}
+
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(4)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0% !important;
+  margin-bottom: 0% !important;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(4)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 10px !important;
+}
+body > main > section.Blog-Genarle > ul > li > div > div > div > a:hover {
+  color: #0ce0ff !important;
+}
+
+/* ! section Blog Cardiology start  /////////////////////////////////////////////////  */
+
+body > main > section.Blog-Genarle > h1:nth-child(5) {
+  margin-top: 50px;
+}
+
+/* ! section Blog Cardiology start  /////////////////////////////////////////////////  */
+
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(14)
+  > li:nth-child(1)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(14)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 35px !important;
+}
+/* ! Section  Blog End */
+
+body > main > section.BlogCardoilogy > h2 {
+  background-color: #007fff;
+  padding: 20px;
+  margin-top: 10px;
+  /* position: sticky; */
+  top: 15%;
+}
+main .BlogCardoilogy {
+  /* height: 550px; */
+  padding: 35px;
+}
+body > main > section.BlogCardoilogy > h1 {
+  text-align: center;
+  font-size: 48px;
+}
+body > main > section.BlogCardoilogy > p {
+  text-align: center;
+  color: #007fff;
+  font-size: 23px;
+  font-weight: 550;
+}
+body > main > section.BlogCardoilogy > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+body > main > section.BlogCardoilogy > ul > li {
+  width: 25%;
+  padding: 15px;
+}
+.Container-Card-Blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > p > img {
+  width: 50px;
+  height: 52px;
+  border-radius: 50%;
+}
+body > main > section.BlogCardoilogy > ul > li > div > img {
+  margin-bottom: 10px;
+}
+body > main > section.BlogCardoilogy > ul > li:nth-child(2) > div > img {
+  height: 150%;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > div > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > div > p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+body
+  > main
+  > section.BlogCardoilogy
+  > ul
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+body
+  > main
+  > section.BlogCardoilogy
+  > ul
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 15px !important;
+}
+body > main > section.BlogCardoilogy > ul > li > div > div > div > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #007fff;
+  font-weight: 600;
+}
+
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(6)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(7)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(8)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(8)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-bottom: 10px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(8)
+  > li:nth-child(4)
+  > div
+  > div
+  > div
+  > p {
+  margin-bottom: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(8)
+  > li:nth-child(2)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+  margin-bottom: 23px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(8)
+  > li:nth-child(1)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(10)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(10)
+  > li:nth-child(4)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(10)
+  > li:nth-child(2)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 22px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(10)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 10px !important;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(11)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(12)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(15)
+  > li:nth-child(2)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 25px;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(15)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > p {
+  margin-top: 5px;
+  margin-bottom: 0%;
+}
+body
+  > main
+  > section.Blog-Genarle
+  > ul:nth-child(15)
+  > li:nth-child(3)
+  > div
+  > div
+  > div
+  > a {
+  margin-top: 10px !important;
+}
+body > main > section.Blog-Genarle > ul > li > div > img:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 104%;
+}
+/* ! section Blogs Cardiology start  */
+
+/* ! section Blogs Cardiology End  */
+
+/* ! main End  ............................................................................................................ */
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+  bottom: 0 !important;
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}

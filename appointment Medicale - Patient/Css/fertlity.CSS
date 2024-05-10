@@ -1,0 +1,1213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #ffffff;
+  height: 950vh;
+  position: relative;
+}
+body > header > img {
+  width: 70px;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+/* ! main Start ................................................................................................... */
+/* ! Section fertility start */
+main .Fertlity-Start {
+  padding-top: 0%;
+  background: url(/img/fertility/BackGround/Wave-10s-1366px.svg);
+}
+main .Fertlity-Start .Faher-Fer {
+  display: flex;
+  align-items: center;
+  padding: 35px;
+}
+body > main > section > div > div.Left-Fer > img {
+  width: 80%;
+}
+
+body > main > section > div > div.Right-Fer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 50%;
+}
+body > main > section > div > div.Right-Fer h1 {
+  margin-bottom: 300px;
+  font-size: 48px;
+  color: #f2f6f6;
+}
+body > main > section > div > div.Right-Fer h1 span {
+  color: #0e82fd;
+  font-weight: 550;
+}
+body > main > section > div > div.Right-Fer > div.btn {
+  position: absolute;
+  margin-bottom: 80px;
+  top: 50%;
+}
+body > main > section > div > div.Right-Fer > div.btn > button:nth-child(1) {
+  padding: 15px 60px;
+  border-radius: 10px;
+  background-color: #007fff;
+  border: 2px solid #f2f6f6;
+}
+body
+  > main
+  > section
+  > div
+  > div.Right-Fer
+  > div.btn
+  > button:nth-child(1):hover {
+  cursor: pointer;
+  background-color: #0ce0ff;
+}
+body > main > section > div > div.Right-Fer > div.btn > button:nth-child(2) {
+  background-color: #0ce0ff;
+  padding: 15px 60px;
+  border: 2px solid #f2f6f6;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+body
+  > main
+  > section
+  > div
+  > div.Right-Fer
+  > div.btn
+  > button:nth-child(2):hover {
+  background-color: #007fff;
+  cursor: pointer;
+}
+body > main > section > div > div.Right-Fer > div.btn > button a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-size: 22px;
+}
+main .Fertlity-Start .Faher-Fer .Right-Fer ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #007fff;
+  padding: 15px 5px;
+  width: auto;
+  border-radius: 10px;
+}
+body > main > section > div > div.Right-Fer > div:nth-child(3) {
+  position: absolute;
+  top: 70%;
+}
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li {
+  margin-left: 5px;
+  border-left: 2px solid #f2f6f6;
+  display: flex;
+  padding: 10px;
+}
+body > main > section > div > div.Right-Fer > div:nth-child(3) {
+  position: absolute;
+  margin-top: 25px;
+  right: 15%;
+}
+
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li:first-child {
+  border-left: none;
+}
+
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li:last-child {
+  border-left: none;
+}
+
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li input {
+  border: none;
+  outline: none;
+}
+
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li i {
+  padding: 5px;
+}
+
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li button {
+  background-color: #007fff;
+  border: 2px solid #007fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+body
+  > main
+  > section
+  > div
+  > div.Right-Fer
+  > div:nth-child(3)
+  > form
+  > ul
+  > li:nth-child(3)
+  > input[type="date"] {
+  background-color: transparent;
+  color: #f2f6f6;
+}
+
+body
+  > main
+  > section
+  > div
+  > div.Right-Fer
+  > div
+  > form
+  > ul
+  > li
+  > input::placeholder {
+  color: #f2f6f6;
+  font-size: 17px;
+}
+body > main > section > div > div.Right-Fer > div > form > ul > li > input {
+  background-color: transparent;
+  color: black;
+  font-size: 15px;
+}
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li button a {
+  text-decoration: none;
+  color: #f2f6f6;
+  font-size: 14px;
+}
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li button:hover a {
+  color: #007fff;
+}
+main .Fertlity-Start .Faher-Fer .Right-Fer ul li button:hover {
+  background-color: whitesmoke;
+  color: #007fff;
+}
+body > main > section {
+  position: relative;
+  background-color: rgba(112, 128, 144, 0.5);
+}
+body > main > section > img:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  animation-name: Sutii;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+body > main > section > img:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  left: 31%;
+  animation-name: Sutii;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+body > main > section > img:nth-child(1) {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  animation-name: Sutii;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes Sutii {
+  to {
+    transform: translateY(10px);
+  }
+}
+/* ! Section fertility End */
+
+/* ! Service Start  */
+
+main .Service {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+main .Service .Sharp {
+  position: absolute;
+  top: 20%;
+  width: 5%;
+  transform: rotate(1turn);
+  animation-duration: 1s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+body > main > section.Service > img:nth-child(2) {
+  left: 50%;
+  top: 80%;
+  animation-duration: 3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main .Service .Left-Service {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+body > main > section.Service > div.Left-Service > p {
+  font-size: 25px;
+  font-weight: 550;
+  color: #007fff;
+}
+body > main > section.Service > div.Left-Service > h1 {
+  font-size: 48px;
+}
+body > main > section.Service > div.Right-Service {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0%;
+  justify-content: space-around;
+}
+body > main > section.Service > div.Right-Service div img {
+  height: 109px;
+  border-radius: 15px;
+}
+body > main > section.Service > div.Right-Service > div {
+  background-color: #f2f6f6;
+  margin-bottom: 20px !important;
+  border-radius: 15px;
+  width: 35%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body > main > section.Service > div.Right-Service > div:last-child {
+  background-color: transparent;
+}
+body > main > section.Service > div.Right-Service > div > button {
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: #0ce0ff;
+  border: #0ce0ff;
+}
+body > main > section.Service > div.Right-Service > div > button:hover {
+  background-color: #f2f6f6;
+  border: 3px solid #0ce0ff;
+  cursor: pointer;
+}
+body > main > section.Service > div.Right-Service > div > button:hover a {
+  color: #0ce0ff;
+}
+body > main > section.Service > div.Right-Service > div > button > a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-size: 21px;
+}
+body > main > section.Service > div.Right-Service > div > button > a :hover {
+  color: #0ce0ff;
+}
+body > main > section.Service > div.Right-Service > div > h4 {
+  color: #007fff;
+  font-weight: 550;
+}
+body > main > section.Service > div.Right-Service > div > a {
+  text-decoration: none;
+  color: #007fff;
+  font-weight: 550;
+}
+/* ! Service End */
+
+/* ! section Ours TEAM Start */
+body > main > section.oursTeam {
+  padding: 25px;
+}
+body > main > section.oursTeam > div > div > div.header-CCard > img {
+  width: 300px;
+  height: 300px;
+}
+body > main > section.oursTeam > div > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start !important;
+}
+body > main > section.oursTeam > div > div {
+  background-color: #f2f6f6;
+  padding: 20px;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+body > main > section.oursTeam > div > div > div > div {
+  display: flex;
+  justify-content: center;
+}
+body
+  > main
+  > section.oursTeam
+  > div
+  > div
+  > div
+  > div
+  > div.Specialité-Details {
+  background: #ccfbf1;
+  color: #14b8a6;
+  margin-left: 5px;
+  padding: 10px;
+}
+body
+  > main
+  > section.oursTeam
+  > div
+  > div
+  > div
+  > div
+  > div.Specialité-génerale {
+  background: #ddd6fe;
+  padding: 10px;
+  color: #7c3aed;
+}
+body > main > section.oursTeam > div > div > div > h3 {
+  color: #007fff;
+}
+body > main > section.oursTeam .Card-Father {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button {
+  padding: 10px 30px;
+  margin-left: 7px;
+  border-radius: 25px;
+  border: 2px solid #007fff;
+  background-color: #007fff;
+  margin-top: 10px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button:hover {
+  border: 1px solid #007fff;
+  background-color: #f2f6f6;
+  color: #007fff;
+  font-size: 20px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button:hover a {
+  color: #007fff;
+}
+
+main .Card-Doctor .Card-Father .Card-CContainer .fa-solid {
+  position: absolute;
+  background-color: #f2f6f6;
+  padding: 5px;
+  margin: 5px 6px;
+  border-radius: 10px;
+}
+
+main .Card-Doctor .Card-Father .Card-CContainer button a {
+  text-decoration: none;
+  color: #f0ffff;
+}
+main .Card-Father .Card-CContainer .Specialité-Details:hover,
+.Specialité-génerale:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+body
+  > main
+  > section.oursTeam
+  > div
+  > div
+  > div:nth-child(2)
+  > div.Specialité-Doc
+  > div.Specialité-Details:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+body > main > section.oursTeam {
+  padding: 36px;
+}
+body > main > section.oursTeam > p {
+  margin: 25px;
+  font-size: 52px;
+  color: #007fff;
+  font-weight: 550;
+}
+body > main > section.oursTeam > h4 {
+  font-size: 45px;
+  color: #f2f6f6;
+}
+main .Card-Father .Card-CContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+body > main > section.oursTeam > div > div > div > div > div {
+  margin-left: 15px;
+}
+body > main > section.oursTeam > div > div > div > div > button {
+  padding: 10px 20px;
+  background-color: #007fff;
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 2px solid #007fff;
+}
+body > main > section.oursTeam > div > div > div > div > button:hover {
+  background-color: #0ce0ff;
+  border: 2px solid #f0ffff;
+}
+body > main > section.oursTeam > div > div > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body > main > section.oursTeam > div > div > div > div > button > a {
+  text-decoration: none;
+  color: #f2f6f6;
+  font-weight: 550;
+  font-size: 16px;
+}
+
+/* ! section OursTEAM End  */
+
+/* ! Section Blog Start  */
+main .Blog {
+  display: flex;
+  background-color: rgba(112, 128, 144, 0.8);
+  justify-content: space-around;
+  padding: 25px;
+  padding-bottom: 100px;
+  height: 1000px;
+}
+
+main .Blog .DoCtor-img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+main .Blog .Card-blog img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .Blog .Card-blog {
+  border: 2px solid #0ce0ff;
+  margin-top: 200px;
+  position: relative;
+  border-radius: 15px;
+  background-color: #f2f6f6;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  padding: 20px;
+}
+body > main > section.Blog > div > div:nth-child(2) > div:nth-child(1) > p {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: color rgb(107, 114, 128);
+}
+body > main > section.Blog > div > div:nth-child(2) > div:nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+  color: #4d5d53;
+  margin-bottom: 10px;
+}
+.Specialité-Details:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+body > main > section.Blog > div > div.header- > img {
+  height: 270px !important;
+}
+body > main > section.Blog > div > div:nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+}
+body
+  > main
+  > section.Blog
+  > div
+  > div:nth-child(2)
+  > div.Specialité-Doc
+  > div.Specialité-génerale,
+body
+  > main
+  > section.Blog
+  > div
+  > div:nth-child(2)
+  > div.Specialité-Doc
+  > div.Specialité-Details,
+body
+  > main
+  > section.Blog
+  > div
+  > div:nth-child(2)
+  > div.Specialité-Doc
+  > div.Specialité-Details {
+  margin-right: 20px;
+  color: #007fff;
+  padding: 10px;
+  background: rgb(219, 239, 254);
+}
+
+body > main > section.Blog > div > div:nth-child(2) > div:nth-child(4) > p {
+  margin-top: 10px;
+  color: #4d5d53;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+body > main > section.Blog > div > div:nth-child(2) > button {
+  padding: 10px 20px;
+  background-color: #0ce0ff;
+  border: 2px solid #0ce0ff;
+  border-radius: 35px;
+}
+body > main > section.Blog > div > div:nth-child(2) > button:hover {
+  background-color: #f2f6f6;
+  border: #0ce0ff 2px solid;
+}
+body > main > section.Blog > div > div:nth-child(2) > button:hover a {
+  color: #0ce0ff;
+}
+body > main > section.Blog > div > div:nth-child(2) > button > a {
+  text-decoration: none;
+  color: #f2f6f6;
+  font-weight: 600;
+  font-size: 21px;
+}
+body > main > section.Blog > div > div:nth-child(2) > button > a:hover {
+  color: #0ce0ff;
+}
+.Blog {
+  position: relative;
+}
+.Blog h4,
+.Blog h1 {
+  top: 0%;
+  position: absolute;
+  transform: translateY(50px);
+  font-size: 40px;
+  color: #007fff;
+  font-weight: 600;
+}
+main .Blog h1 {
+  color: #f2f6f6;
+  font-size: 54px;
+  transform: translateY(100px);
+}
+main .Blog h1::after {
+  content: url(/Icons/header-icon.svg);
+  position: absolute;
+  transform: translateY(-15px);
+}
+body > main > section.Blog > button {
+  position: absolute;
+  top: 92%;
+  border: 2px solid #0ce0ff;
+  padding: 15px 25px;
+  background-color: #0ce0ff;
+  border-radius: 16px;
+}
+body > main > section.Blog > button:hover {
+  background-color: #f2f6f6;
+  border: #0ce0ff 2px solid;
+}
+body > main > section.Blog > button:hover a {
+  color: #0ce0ff;
+}
+body > main > section.Blog > button > a {
+  text-decoration: none;
+  color: #f2f6f6;
+  font-weight: 900;
+}
+/* ! Section Blog End  */
+/* ! Section Why Us Start  */
+
+main .WhyDoc {
+  height: 1200px;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+}
+main .WhyDoc h5 {
+  margin-top: 25px;
+  text-align: center;
+  text-align: center !important;
+  font-size: 38px;
+  position: relative;
+  color: #0ce0ff;
+}
+main .WhyDoc h5::after {
+  content: "";
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  margin-left: 20px;
+  height: 3px;
+  background: #0ce0ff;
+}
+main .WhyDoc h5::before {
+  content: "";
+  margin-left: -70px;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 3px;
+  background: #0ce0ff;
+}
+
+main .WhyDoc h3 {
+  text-align: center;
+  font-size: 48px;
+}
+main .WhyDoc .ParentWhyDoc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .WhyDoc .ParentWhyDoc .left-doc {
+  width: 100%;
+}
+main .WhyDoc .ParentWhyDoc .left-doc ul {
+  margin-top: 120px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex-direction: column;
+}
+main .WhyDoc .ParentWhyDoc .left-doc ul li {
+  display: flex;
+  margin-bottom: 70px;
+  border-radius: 30px;
+  margin-right: 25px;
+  background: rgba(242, 246, 246);
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+main .WhyDoc .ParentWhyDoc .left-doc ul li img {
+  background-color: rgba(0, 127, 255, 0.1);
+  border-radius: 15px;
+  margin-right: 20px;
+  padding: 20px 25px;
+}
+body > main > section.WhyDoc > div > div.left-doc > ul > li > div > h2 {
+  margin-bottom: 9px;
+}
+body > main > section.WhyDoc > div > div.left-doc > ul > li > div > p {
+  font-weight: 550;
+  color: rgba(112, 128, 144);
+}
+/* ! Section Why Us End  */
+
+/* ! Section Client Start  */
+main .Clients {
+  position: relative;
+  height: 800px;
+  padding: 50px;
+}
+
+main .Clients .Client-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > section.Clients > div > div.Lft-client > img {
+  animation-name: Anmition;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes Anmition {
+  to {
+    transform: translateY(20px);
+  }
+}
+body > main > section.Clients > div > div.Right-client > h5 {
+  font-size: 40px;
+  color: #007fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+body > main > section.Clients > div > div.Right-client > h5::after {
+  content: "";
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  margin-left: 20px;
+  height: 3px;
+  background: #007fff;
+}
+body > main > section.Clients > div > div.Right-client > h5::before {
+  content: "";
+  margin-left: -70px;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 3px;
+  background: #007fff;
+}
+body > main > section.Clients > div > div.Right-client > h1 {
+  font-size: 48px;
+  color: #f2f6f6;
+}
+body > main > section.Clients > div > div.Right-client > h1 > span {
+  color: #007fff;
+}
+main .Client-container .opinien {
+  background-color: #f2f6f6;
+  margin-top: 150px;
+  margin-left: 10px;
+  position: relative;
+  padding: 45px;
+  border-radius: 12px;
+}
+main .Client-container .opinien p {
+  line-height: 30px;
+
+  color: #4d5d53;
+  font-weight: 550;
+}
+body > main > section.Clients > div > div.Right-client > div > img {
+  width: 150px;
+  border-radius: 15px;
+  top: -50%;
+  right: 0%;
+  margin-bottom: 50px;
+  position: absolute;
+
+  animation-name: Anmition;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* ! Section Client End */
+
+/* ! main End................................................................................................... */
+
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}

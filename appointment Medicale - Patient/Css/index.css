@@ -1,0 +1,1174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #ffffff;
+  height: 850vh;
+  position: relative;
+}
+body > header > img {
+  width: 70px;
+}
+header {
+  position: sticky;
+  top: 0;
+  /*  z-index: 1000; */
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+  border-radius: 0px 0px 5px 6px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+
+/* !                      Main Css Start   ........................................                                   */
+section {
+  position: relative;
+  width: 100%;
+}
+section .parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*! Left start*/
+section .parent .left {
+  width: 50%;
+  margin-top: 50px;
+  padding: 25px;
+}
+section .parent .left .plus {
+  position: absolute;
+  right: 50%;
+  width: 100px;
+  margin-top: 20px;
+}
+
+section .parent .left h1 {
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+section .parent .left h1 span {
+  color: #007fff;
+}
+section .parent .left p {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+}
+section .parent .left #FirstButn {
+  font-weight: 500;
+  min-width: 200px;
+  display: inline-block;
+  background-color: rgb(14, 130, 253);
+  font-size: 18px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset;
+  border-radius: 8px;
+  margin: 0px;
+  padding: 12px 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(14, 130, 253);
+  margin-left: 50px;
+}
+section .parent .left button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+section .parent .left .Flech {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+section .left ul {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  /* padding: 15px; */
+  padding: 15px 5px;
+  min-width: 800px;
+  z-index: 1;
+  border-radius: 10px;
+  margin-top: 150px;
+  margin-left: 60px;
+}
+section .left ul li {
+  margin-left: 5px;
+  border-left: 2px solid rgba(112, 128, 144, 0.5);
+  padding: 10px;
+}
+section .left ul li:first-child {
+  border-left: none;
+}
+section .left ul li:last-child {
+  border-left: none;
+}
+section .left ul li input {
+  border: none;
+  outline: none;
+}
+section .left ul li i {
+  padding: 5px;
+}
+
+section .left ul .Sershe button {
+  margin-left: 50px;
+  min-width: 150px;
+  position: absolute;
+  display: inline-block;
+  background-color: #007fff;
+  border: 2px solid #007fff;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: -10px;
+  transform: translate(-40px);
+}
+section .left ul .Sershe button:hover a {
+  background-color: whitesmoke;
+  color: #007fff;
+  cursor: pointer;
+}
+section .left li button:hover {
+  background-color: whitesmoke;
+  color: #007fff;
+  cursor: pointer;
+}
+
+/*!left  End*/
+
+/*!      Right Start                */
+section .parent .right {
+  width: 50%;
+  position: relative;
+}
+section .parent .right .main-Bannar {
+  max-width: 100%;
+
+  height: auto;
+}
+section .parent .right .Bannar-1 {
+  position: absolute;
+  top: 30%;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 10px;
+  margin: 0;
+  animation-name: pope;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+section .parent .right .Bannar-2 {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 10px;
+  animation-name: pope-2;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+section .parent .right .Bannar-3 {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 10px;
+  animation-name: pope-2;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pope {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes pope-2 {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+/*!      Right End                */
+
+/*! Section Specialties Start */
+main .Specialites {
+  margin-top: 10px;
+  background: url(/img/background-1.jpg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-size: cover;
+
+  height: 800px;
+  padding: 20px;
+}
+main .Specialites h2 {
+  font-size: 48px;
+  color: #007fff;
+  margin-left: 40px;
+}
+main .Specialites h2::after {
+  content: url(/Icons/header-icon.svg);
+  position: absolute;
+  transform: translateY(-10px);
+}
+main .Specialites .Colection-specialité {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+main .Specialites .Colection-specialité div {
+  padding: 40px;
+  position: relative;
+  border: 2px solid rgba(112, 128, 144, 0.2);
+  border-radius: 10px;
+}
+
+main .Specialites .Colection-specialité div img {
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  /* position: absolute; */
+  padding: 20px;
+  background-color: rgba(227, 218, 201, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+main .Specialites .Colection-specialité div .photo {
+  background-color: rgb(14, 130, 253);
+}
+main .Specialites .Colection-specialité div p {
+  text-align: center;
+  font-size: 16px;
+}
+
+main .Specialites .Colection-specialité div img:hover {
+  transform: rotateY(360deg);
+}
+main .Specialites .See {
+  margin-top: 100px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .Specialites .See button {
+  padding: 15px 40px;
+  background-color: #007fff;
+  border-radius: 10px;
+  border: 2px solid rgb(112, 128, 144);
+
+  color: #fffff0;
+}
+main .Specialites .See button:hover {
+  background-color: #fffff0;
+  color: #007fff;
+}
+main .Specialites .See button:hover a {
+  color: #007fff;
+}
+main .Specialites .See button a {
+  text-decoration: none;
+  color: #fffff0;
+  font-size: 17px;
+}
+
+main .Specialites .See button a:hover {
+  color: #007fff;
+}
+
+/*! Section Specialties End */
+
+/*! Section Best Doctors Start*/
+main h2 {
+  margin-left: 50px;
+  margin-bottom: 100px;
+  font-size: 48px;
+  color: rgba(112, 128, 144, 0.9);
+}
+main h2 span {
+  color: #007fff;
+}
+main h2::after {
+  position: absolute;
+  content: url(/Icons/header-icon.svg);
+  transform: translateY(-10px);
+}
+main .Best-Doctors {
+  height: 500px;
+  margin-top: 50px;
+  width: 100%;
+}
+main .Best-Doctors ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+main .Best-Doctors ul li {
+  border: 2px solid rgba(112, 128, 144, 0.3);
+  width: 250px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+main .Best-Doctors ul li * {
+  margin-bottom: 10px;
+}
+main .Best-Doctors ul li img {
+  width: 250px !important;
+  height: 166px !important;
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+main .Best-Doctors ul .Price {
+  background-color: #f0ffff;
+  padding: 10px;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  transform: translateY(65);
+}
+main .Best-Doctors ul li .Profile {
+  text-align: left;
+  margin-left: 2px;
+  display: inline-block;
+}
+main .Best-Doctors ul li .Profile a {
+  color: #2a3439;
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 5px;
+  text-decoration: none;
+}
+main .Best-Doctors ul li .Evaluate {
+  min-width: 46px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin: 0px 4px 0px 0px;
+  padding: 2px 3px;
+  font-weight: 600;
+  background: rgb(255, 188, 17);
+  border-radius: 6px;
+}
+main .Best-Doctors ul li p {
+  margin-left: 6px;
+  margin-top: 3px;
+  background: #ccfbf1;
+  width: fit-content;
+  color: #14b8a6;
+  padding: 10px;
+  /* color: rgba(112, 128, 144, 0.5); */
+}
+body > main > section.Best-Doctors > ul > li > div:nth-child(6),
+body > main > section.Best-Doctors > ul > li > div:nth-child(5) {
+  margin: 10px;
+}
+main .Best-Doctors ul li button {
+  background-color: #007fff;
+  text-align: center;
+  border: #007fff 2px solid;
+  padding: 10px;
+  border-radius: 8px;
+}
+main .Best-Doctors ul li button a {
+  text-decoration: none;
+  color: #f2f6f6;
+  /* padding: 20px; */
+}
+main .Best-Doctors ul li .Map {
+  margin-left: 10px;
+}
+main .Best-Doctors ul li .fa-solid {
+  margin-right: 5px;
+}
+
+/*! Section Best Doctors End*/
+
+/*! Help Section start  */
+main .Help-user {
+  padding-top: 20px;
+  width: 100%;
+  /*     */
+}
+main .Help-user h2 {
+  font-size: 48px;
+  color: rgba(112, 128, 144, 0.9);
+  text-align: right;
+  margin-right: 80px;
+  transform: translateY(160px);
+}
+
+main .Help-user h5 {
+  text-align: center;
+  transform: translateY(160px);
+  font-size: 20px;
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+}
+main .Help-user .Ste {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-items: flex-end;
+}
+main .Help-user .Ste .Right .Step {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+main .Help-user .Ste .Right .Step li {
+  width: 50%;
+  list-style: none;
+}
+
+main .Help-user .Ste .Right .Step ul {
+  display: flex;
+  margin-top: 50px;
+}
+main .Help-user .Ste .Right .Step ul li {
+  width: auto;
+}
+main .Help-user .Ste .Right .Step li ul li img {
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  /*  height: 40px;
+  width: 40px; */
+  background-color: rgba(178, 190, 181, 0.4);
+}
+main .Help-user .Ste .Right .Step li ul li {
+  margin-bottom: 60px;
+  margin-right: 10px;
+}
+main .Help-user .Ste .Right .Step ul li p {
+  text-align: left;
+  color: #1b1b1b;
+  font-size: 17px;
+
+  margin-top: 30px;
+}
+main .Help-user .Ste .Right .Step .Search-Doctors li:first-child::after {
+  content: "Search Doctor";
+  position: absolute;
+  transform: translateY(-40px);
+  margin-left: 20px;
+  font-size: 25px;
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+}
+main .Help-user .Ste .Right .Step .Check-Doctor li:first-child::after {
+  content: "Check The Doctor";
+  position: absolute;
+  transform: translateY(-40px);
+  margin-left: 25px;
+  font-size: 25px;
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+}
+main .Help-user .Ste .Right .Step .Schedule-Appointment li:first-child::after {
+  content: "Schedule Appointment";
+  position: absolute;
+  transform: translateY(-40px);
+  margin-left: 25px;
+  font-size: 25px;
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+}
+main .Help-user .Ste .Right .Step .Get-Your-Solution li:first-child::after {
+  content: "Get Your Solution";
+  position: absolute;
+  transform: translateY(-40px);
+  margin-left: 25px;
+  font-size: 25px;
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+}
+
+/*! Help Section End */
+
+/*! Section Article   Start*/
+main .Article {
+  background: url(/img/Article.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+main .Article h2 {
+  text-align: center;
+  font-size: 54px;
+  font-weight: 900;
+  margin-top: 30px;
+  transform: translateY(80px);
+}
+main .Article .container-article {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .Article .Article-Father img {
+  border-radius: 20px;
+
+  width: 200px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+main .Article .Article-Father img:hover {
+  width: 300px;
+}
+main .Article .Article-Father {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  padding-right: 0px;
+  margin-left: 40px;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 20px;
+  width: 45%;
+  justify-content: space-around;
+}
+main .Article .Article-Father .photo-Profile {
+  margin-right: 10px;
+}
+main .Article .Article-Father .profile-informaition .Writer {
+  color: #6b7280;
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  margin-left: 20px;
+}
+main .Article .Article-Father .profile-informaition .Writer .fa-solid {
+  margin-left: 30px;
+}
+main .Article .Article-Father .profile-informaition h4 {
+  color: rgb(14, 130, 253);
+  font-weight: 900;
+  font-size: 17px;
+  margin-bottom: 2%;
+  margin-top: 15px;
+}
+main .Article .Article-Father .profile-informaition p {
+  /* color: rgba(112, 128, 144); */
+  color: #6b7280;
+  margin-top: 0%;
+  /*   font-weight: 800; */
+  font-size: 16px;
+}
+main .Article .Article-Father .profile-informaition button {
+  padding: 10px;
+  border: 2px solid rgb(14, 130, 253);
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-top: 10px;
+  background-color: rgba(107, 114, 128, 0.2);
+}
+main .Article .Article-Father .profile-informaition button:hover {
+  background-color: rgb(14, 130, 253);
+}
+main .Article .Article-Father .profile-informaition button:hover a {
+  color: white;
+}
+main .Article .Article-Father .profile-informaition button a {
+  text-decoration: none;
+  color: rgb(14, 130, 253);
+  padding-left: 30px;
+  font-size: 15px;
+  padding-right: 30px;
+}
+body > main > section.Article > div > div > div.photo-Profile > img {
+  width: 200px;
+  height: 165px;
+}
+/*! Section Article End */
+
+/*! section answer  start */
+
+main .Answer {
+  margin-top: 50px;
+}
+main .Answer h5 {
+  color: #007fff;
+  font-size: 28px;
+  text-align: center;
+}
+main .Answer h2 {
+  text-align: center;
+}
+main .Answer .Container-Ansewr {
+  list-style: none;
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  background-color: rgba(112, 128, 144, 0.3);
+  /*   text-align: center; */
+  padding: 20px;
+
+  border-radius: 5px;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  margin-top: 4px;
+}
+
+body main section.Answer ul li {
+  list-style: none;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+body main section.Answer ul li label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+body main section.Answer ul li label::before {
+  content: "+";
+  color: #0e82fd;
+  font-weight: 900;
+  font-size: 25px;
+  margin-right: 10px;
+}
+body main section.Answer ul li input[type="radio"] {
+  display: none;
+}
+.content p {
+  color: #1f2937;
+  font-size: 20px;
+}
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+body main section.Answer ul li input[type="radio"]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+body main section.Answer ul li input[type="radio"]:checked + label::before {
+  content: "-";
+  color: #0e82fd;
+  font-weight: 900;
+  margin-right: 10px;
+}
+/*! section answer  end */
+/*! section opinion start*/
+main .opinien .Container-opinien {
+  display: flex;
+  z-index: 99999;
+  height: 500px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+main .opinien .Container-opinien::after {
+  content: url(/img/afterbefor.jpg);
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.Container-opinien::before {
+  content: url(/img/afterbefor.jpg);
+  position: absolute;
+  top: 74%;
+  left: 0%;
+}
+main .opinien .Container-opinien img {
+  width: 50%;
+  border-radius: 50%;
+}
+main .opinien .Container-opinien div {
+  width: 35%;
+}
+main .opinien .Container-opinien .comment {
+  width: 50%;
+}
+main .opinien .Container-opinien .comment h5 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: rgb(14, 130, 253);
+  color: rgba(112, 128, 144);
+}
+main .opinien .Container-opinien .comment h1 {
+  font-size: 46px;
+  margin-top: 2px;
+  color: black;
+}
+main .opinien .Container-opinien .comment h1::after {
+  content: url(/Icons/header-icon.svg);
+  position: absolute;
+  transform: translateY(-13px);
+}
+main .opinien .Container-opinien .comment p {
+  color: rgb(75, 79, 81);
+  font-size: 20px;
+}
+main .opinien .Container-opinien .comment span {
+  color: rgba(112, 128, 144);
+  font-size: 18px;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  background-color: rgba(15, 183, 107, 0.12);
+  padding: 35px;
+  color: #0e82fd;
+  border-radius: 50%;
+}
+/*! section opinion  end */
+/* !                      Main Css End                                      */
+
+@media (max-width: 922px) {
+  header {
+    display: none;
+  }
+  body > main > section:nth-child(1) > div > div.right {
+    display: none;
+  }
+  body > main > section:nth-child(1) > div > div.left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}

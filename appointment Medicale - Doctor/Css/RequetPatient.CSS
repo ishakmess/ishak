@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > header > img {
+  width: 55px;
+  margin: 10px;
+}
+body {
+  background-color: #ffffff;
+  height: fit-content;
+  position: relative;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+/* !main start ******************************************************************************************************************* */
+
+/* ! Section About Us Start  */
+
+main .About {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+  background-color: #f2f6f6;
+}
+main .About h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+main .About h5 {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body > main > section > h5 > span:nth-child(1) > a {
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 20px;
+  color: #007fff;
+}
+/* ! Section About Us End  */
+
+/* ! Request Start  */
+/* ! Appointment start  */
+.Requet {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(112, 128, 144, 0.2);
+  margin-bottom: 20px;
+}
+.Requet img {
+  width: 150px;
+}
+.Requet div {
+  margin-right: 80px;
+}
+.Appointment {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div:nth-child(2) {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div:nth-child(3)
+  > div {
+  margin-bottom: 10px;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div
+  > div
+  > button {
+  background-color: rgba(15, 183, 107, 0.12) !important;
+  padding: 10px;
+  border: 2px solid rgba(15, 183, 107, 0.12);
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div:nth-child(3)
+  > div:nth-child(1)
+  > button
+  > a {
+  color: rgb(38, 175, 72) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div:nth-child(3)
+  > div:nth-child(2)
+  > button
+  > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(230, 60, 60) !important;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.Content-option
+  > div.Appointment
+  > div
+  > div:nth-child(3)
+  > div:nth-child(2)
+  > button {
+  background-color: rgba(230, 60, 60, 0.2) !important;
+  border: 1px solid rgba(230, 60, 60, 0.2);
+}
+/* ! Appointment End  */
+/* ! Profile Start  */
+
+main .Profile {
+  background-color: rgba(112, 128, 144, 0.2);
+  height: fit-content;
+  padding: 80px 60px;
+  width: 100%;
+  height: 100%;
+}
+body > main > section.Profile > div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+main .Profile .option-Profile {
+  width: 20%;
+  margin-right: 100px;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  height: 100%;
+  padding: 25px;
+}
+main .Profile .option-Profile ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.3);
+  padding: 10px;
+}
+body > main > section.Profile > div > div.Content-option {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgba(112, 128, 144, 0.3);
+  padding: 40px 60px;
+}
+body > main > section.Profile > div > div.option-Profile > ul li:last-child {
+  border: none;
+  margin-bottom: 0% !important;
+}
+main .Profile .option-Profile ul {
+  list-style: none;
+}
+main .Profile .option-Profile ul * {
+  margin-bottom: 5px;
+}
+body
+  > main
+  > section.Profile
+  > div
+  > div.option-Profile
+  > ul
+  > li:nth-child(2) {
+  border-bottom: none !important;
+  outline: none !important;
+}
+main .Profile .option-Profile ul li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 550;
+}
+main .Profile .option-Profile ul li a:hover {
+  color: #007fff;
+}
+main .Profile .option-Profile ul img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+main .Profile .Contenue-Profile {
+  height: 100% !important;
+}
+body > main > section.Profile > div > div.Contenue-Profile > div {
+  height: 100%;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+}
+
+/* !  profile Content start  */
+/* ! Profile End */
+/* ! Request End */
+
+/* !main End ******************************************************************************************************************* */
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+
+  margin-top: 100px;
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}

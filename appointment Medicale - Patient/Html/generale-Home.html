@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Appointment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="shortcut icon"
+      href="../Icons/logo-small.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="../Css/index.css" />
+    <link rel="stylesheet" href="../Css/scrole.CSS" />
+
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="../Css/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="Logo">
+        <img src="../img/logo.png" alt=" Logo" width="150px" />
+      </div>
+      <div class="menu">
+        <nav>
+          <ul class="heder-Option">
+            <li class="Home">
+              <a href="../Html/generale-Home.html">
+                Home <i class="fa-solid fa-chevron-down"></i
+              ></a>
+              <!-- !  Home-option -->
+              <div class="Home-option">
+                <ul>
+                  <li>
+                    <a href="../Html/Cardeiologie-Home.HTML"
+                      ><img
+                        src="../../img/home/Cardiology-Home.jpg"
+                        alt="img-cardiology" />
+                      <div>Cardiology Home</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../Html/Eye-Care-Home.HTML">
+                      <img src="../../img/home/Eye care.jpg" alt="Eye-Care" />
+                      <div>Eye Care Home</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../Html/Fertility-Home.Html">
+                      <img src="../../img/home/fitntly.jpg" alt="fitntly" />
+                      <div>Fertility</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- !  Home-option -->
+            </li>
+
+            <li class="Doctors">
+              <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="Doctors-option">
+                <ul>
+                  <li>
+                    <a href="./MapGrid.HTML" class="option">Map Grid</a>
+                  </li>
+                  <li>
+                    <a href="./MapList.php" class="option">Map List</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="Patient">
+              <a href="#">Patient <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="Patient-option">
+                <ul>
+                  <li>
+                    <a href="../Html/PatientProfile.HTML">Profile Setting</a>
+                  </li>
+                  <li><a href="#">Your Situation</a></li>
+                  <li>
+                    <a href="../Html/changepasswordP.html">Change Password</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="Page">
+              <a href="#"> Pages<i class="fa-solid fa-chevron-down"></i></a>
+              <div class="Page-option">
+                <ul>
+                  <li><a href="../Html/Contact-Us.Html">Contact Us</a></li>
+                  <li><a href="../Html/About-Us.Html">About Us</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="Pharmacy">
+              <a href="#">Setting<i class="fa-solid fa-chevron-down"></i> </a>
+              <div class="Pharmacy-option">
+                <ul>
+                  <li><a href="#">Languages</a></li>
+                  <li><a href="#">Dark-Mode</a></li>
+                  <li><a href="#">Light-Mode</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="Blog">
+              <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="Blog-option">
+                <ul>
+                  <li><a href="../Html/Blog-list.HTML">Blog List</a></li>
+                  <li><a href="../Html/BlogDetails.html">Blog Details</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <img src="../../Icons/patient1.png" class="iconPatient" />
+      <img src="../../Icons/patient2.png" class="iconPatient" />
+      <img src="../../Icons/patient3.png" class="iconPatient" />
+    </header>
+
+    <!-- ! Section main Start ..................................................................................... -->
+    <main>
+      <section>
+        <div class="parent">
+          <div class="left">
+            <img src="../../Icons/header-icon.svg" alt="icon" class="plus" />
+            <h1>Consult <span>Best Doctors </span>Your Nearby Location.</h1>
+            <p>We provide to you With Best Services</p>
+            <button id="FirstButn">
+              <a href="../Html/MapList.php">Start Consult</a>
+            </button>
+            <img src="../../img/down-arrow-img.png" alt="direction" class="Flech" />
+            <form>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    placeholder="Search Doctor,clinics,hospitals"
+                    class="Serach"
+                    required />
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-location-dot"></i
+                  ><input required type="text" placeholder="Location " />
+                </li>
+
+                <li><input type="date" required /></li>
+                <li class="Sershe">
+                  <button><a href="#">Search</a></button>
+                </li>
+              </ul>
+            </form>
+          </div>
+
+          <div class="right">
+            <img src="../../img/right.png" alt="Bannar" class="Bannar-1" />
+            <img src="../../img/right2.png" alt="Bannar" class="Bannar-2" />
+            <img src="../../img/banner-img.png" alt="Poster" class="main-Bannar" />
+            <img src="../../img/right3.png" alt="Bannar" class="Bannar-3" />
+            <div class="scrole" id="scrole">
+              <i class="fa-solid fa-arrow-up-long"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Specialites">
+        <h2>Specialties</h2>
+        <div class="Colection-specialité">
+          <div>
+            <span>
+              <img src="../../img/Spécialité/specialities-02.svg" alt="+" />
+            </span>
+            <p>Neurology</p>
+          </div>
+          <div>
+            <span
+              ><img src="../../img/Spécialité/specialities-01.svg" alt="" />
+            </span>
+            <p>Cardiology</p>
+          </div>
+
+          <div>
+            <span
+              ><img src="../../img/Spécialité/specialities-03.svg" alt=""
+            /></span>
+            <p>Urology</p>
+          </div>
+
+          <div>
+            <span
+              ><img src="../../img/Spécialité/specialities-04.svg" alt=""
+            /></span>
+            <p>Orthopedic</p>
+          </div>
+
+          <div>
+            <span
+              ><img src="../../img/Spécialité/specialities-05.svg" alt=""
+            /></span>
+            <p>Dentist</p>
+          </div>
+
+          <div>
+            <span
+              ><img src="../../img/Spécialité/specialities-06.svg" alt=""
+            /></span>
+            <p>Ophthalmology</p>
+          </div>
+        </div>
+        <div class="See">
+          <button><a href="#">See All Specialties</a></button>
+        </div>
+      </section>
+      <!-- !  Section Best Doctors Start -->
+      <section class="Best-Doctors">
+        <h2><span>Best </span>Doctors</h2>
+
+        <ul>
+          <li>
+            <div>
+              <img src="../../img/doctors/doctor-05.jpg" alt="" />
+            </div>
+            <div class="Profile">
+              <a href="#">Dr Yazid MAHIDDINE</a>
+            </div>
+            <p>Generale Doctor</p>
+            <b></b>
+            <span class="Map"
+              ><i class="fa-solid fa-location-dot"></i> BBA 1008,ALG</span
+            >
+            <div>
+              <button>
+                <a href="../Html/doucmentPatient.Html">Consult</a>
+              </button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="../../img/doctors/doctor-01.jpg" alt="" />
+            </div>
+            <div class="Profile">
+              <a href="#">Dr Rokia Belhaje</a>
+            </div>
+            <p>Generale Doctor</p>
+            <span class="Map"
+              ><i class="fa-solid fa-location-dot"></i> BBA 1008,ALG
+            </span>
+            <div>
+              <button>
+                <a href="../Html/doucmentPatient.Html">Consult</a>
+              </button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="../../img/MAPGRID/doctor3.jpg" alt="" />
+            </div>
+            <div class="Profile">
+              <a href="#">Dr Mssouade Kloufi</a>
+            </div>
+            <
+            <p>Generale Doctor</p>
+            <span class="Map"
+              ><i class="fa-solid fa-location-dot"></i> Bja 1008,ALG</span
+            >
+            <div>
+              <button>
+                <a href="../Html/doucmentPatient.Html">Consult</a>
+              </button>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img
+                src="../../img/MAPGRID/DOCTOR2.jpg "
+                alt="Doctor"
+                class="DoCtor-img" />
+            </div>
+            <div class="Profile">
+              <a href="#">Dr Bouziane Ahmed</a>
+            </div>
+            <p>Neurology</p>
+            <span class="Map"
+              ><i class="fa-solid fa-location-dot"></i> Batna 217,ALG</span
+            >
+            <div>
+              <button>
+                <a href="../Html/doucmentPatient.Html">Consult</a>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- !  Section Best Doctors End -->
+      <!-- ! section Help Doctors Start -->
+
+      <section class="Help-user">
+        <h5>How it Work</h5>
+        <h2>4 easy steps to get your solution</h2>
+        <div class="Ste">
+          <div class="left">
+            <img src="../../img/Help.png" alt="WELCOME" />
+          </div>
+          <div class="Right">
+            <ul class="Step">
+              <li>
+                <ul class="Search-Doctors">
+                  <li><img src="../../Icons/serch-doctors.svg" alt="" /></li>
+                  <li>
+                    <p>
+                      In first start to search a doctor Make sur that you chose
+                      he right suitable for your situation
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="Check-Doctor">
+                  <li><img src="../../icons/check-doctor.svg" alt="" /></li>
+                  <li>
+                    <p>
+                      Check the doctor how you chose it Look at his Location
+                      ,his rating His patient opinions
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="Schedule-Appointment">
+                  <li><img src="../../Icons/calender.svg  " alt="check" /></li>
+                  <li>
+                    <p>
+                      Chose an appointment fill your information Send it after
+                      confirmation
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="Get-Your-Solution">
+                  <li>
+                    <img src="../../Icons/CAlendddr.svg" alt="Calender-icon" />
+                  </li>
+                  <li>
+                    <p>
+                      Contact your doctor receive the best care Get the Solution
+                      to your Situation
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ! section Help Doctors End -->
+
+      <!-- ! section Article Start  -->
+      <section class="Article">
+        <h2>Last Article</h2>
+        <div class="container-article">
+          <div class="Article-Father">
+            <div class="photo-Profile">
+              <img src="../../img/blog/blog22.webp" alt="" />
+            </div>
+            <div class="profile-informaition">
+              <span class="Writer">
+                <i class="fa-regular fa-user"> </i>Johane Libert
+                <i class="fa-solid fa-calendar-days"></i> 17/01/2024</span
+              >
+              <h4>How to use a stethoscope?</h4>
+              <p>
+                It is not uncommon to see a doctor with his stethoscope to his
+                collar. This medical diagnostic instrument invented by Doctor
+                René Laennec in 1816 continues to evolve...
+              </p>
+              <button>
+                <a href="../Html/Blog-list.HTML#blogGenral">View Blog</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="Article-Father">
+            <div class="photo-Profile">
+              <img src="../../img/blog/blog1.jpg" alt="" />
+            </div>
+            <div class="profile-informaition">
+              <span class="Writer"
+                ><i class="fa-regular fa-user"> </i> Kouchida Kykio
+                <i class="fa-solid fa-calendar-days"></i> 01/5/2024</span
+              >
+              <h4>How to properly use a covid self-test??</h4>
+              <p>
+                The high health authority is adopting a new screening strategy
+                for the great good of all. The number of people screenscreened
+                has increased significantly since then....
+              </p>
+              <button>
+                <a href="../Html/Blog-list.HTML#blogGenral">View Blog</a>
+              </button>
+            </div>
+          </div>
+          <div class="Article-Father">
+            <div class="photo-Profile">
+              <img src="../../img/blog/BLOGGENRALE0.jpg" alt="" />
+            </div>
+            <div class="profile-informaition">
+              <span class="Writer"
+                ><i class="fa-regular fa-user"></i> Karyoza Sane
+                <i class="fa-solid fa-calendar-days"></i> 14/03/2024</span
+              >
+              <h4>When and how to use a disinfectant wipe?</h4>
+              <p>
+                Whether you are at home, on transport or in the office,
+                pathogenic bacteria are everywhere. Using a disinfectant product
+                is a practical and effective way to clean and disinfect your
+                hands and surfaces.
+              </p>
+              <button>
+                <a href="../Html/Blog-list.HTML#blogGenral">View Blog</a>
+              </button>
+            </div>
+          </div>
+          <div class="Article-Father">
+            <div class="photo-Profile">
+              <img src="../../img/blog/blog4.jpg" alt="" />
+            </div>
+            <div class="profile-informaition">
+              <span class="Writer"
+                ><i class="fa-regular fa-user"></i> Meriolina goulione
+                <i class="fa-solid fa-calendar-days"></i> 01/03/2024</span
+              >
+              <h4>How to do calf strapping?</h4>
+              <p>
+                Certain sporting activities, including running and trail
+                running, put a strain on the calf muscle (triceps surae).
+                Strapping is sometimes necessary in cases of pain.. It is a
+                physiotherapy technique intended to immobilize an injured limb
+              </p>
+              <button>
+                <a href="../Html/Blog-list.HTML#blogGenral">View Blog</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ! section Article End -->
+
+      <!--! section answer start -->
+      <section class="Answer">
+        <h5>Get your answer</h5>
+        <h2><span>Frequently</span> Asked Questions</h2>
+        <ul class="Container-Ansewr">
+          <li><img src="../../img/ansewr.png" alt="" /></li>
+          <li>
+            <ul class="Answwr">
+              <li>
+                <input type="radio" name="acc" id="first" checked />
+                <label for="first">
+                  How do I cancel or reschedule my appointment?</label
+                >
+                <div class="content">
+                  <p class="Repense">
+                    To cancel or reschedule your appointment, you can log in to
+                    your account on the website or call the clinic directly.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="acc" id="secend" />
+                <label for="secend">
+                  Can I choose a specific doctor or specialist for my
+                  appointment?</label
+                >
+                <div class="content">
+                  <p class="Repense">
+                    To cancel or reschedule your appointment, you can log in to
+                    your account on the website or call the clinic directly.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="acc" id="therd" />
+                <label for="therd">
+                  Is there a waiting list for earlier appointment slots if one
+                  becomes available?</label
+                >
+                <div class="content">
+                  <p class="Repense">
+                    To cancel or reschedule your appointment, you can log in to
+                    your account on the website or call the clinic directly.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="acc" id="fourth" />
+                <label for="fourth">
+                  How can I check the availability of appointments for a
+                  particular date or</label
+                >
+                <div class="content">
+                  <p class="Repense">
+                    To cancel or reschedule your appointment, you can log in to
+                    your account on the website or call the clinic directly.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <input type="radio" name="acc" id="fivth" />
+                <label for="fivth">
+                  How can I check the availability of appointments for a
+                  particular date</label
+                >
+                <div class="content">
+                  <p class="Repense">
+                    To cancel or reschedule your appointment, you can log in to
+                    your account on the website or call the clinic directly.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <!--! section answer end -->
+
+      <!-- !   section opinion clients Start   -->
+      <section class="opinien" id="opinions">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-01.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    let me tell you about this amazing medical appointment app
+                    I've been using. It's been a game-changer for me. With just
+                    a few taps, I can book appointments with my doctors
+                    hassle-free. No more waiting on hold or dealing with
+                    scheduling headaches. It's all about convenience, and I
+                    couldn't be happier. Trust me, you've gotta check it out!
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-002.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    I can't emphasize enough how much easier my life has become
+                    since I started using this medical appointment app. It's
+                    like having a personal assistant dedicated to scheduling my
+                    doctor visits, ensuring I never miss an appointment again.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-003.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    Using this medical appointment app has significantly reduced
+                    my stress levels when it comes to managing my healthcare.
+                    The convenience of being able to book appointments with a
+                    few taps on my phone has been a game-changer.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-001.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    Say goodbye to the days of long wait times and scheduling
+                    conflicts. This medical appointment app puts the power back
+                    in your hands, allowing you to take control of your
+                    healthcare schedule with ease and efficiency.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-03.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    As someone with a busy lifestyle, this medical appointment
+                    app has been a godsend. It simplifies the entire process of
+                    booking appointments, allowing me to focus on what matters
+                    most – my health.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-04.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    I never realized how much time I was wasting trying to book
+                    appointments until I started using this medical appointment
+                    app. Now, I can book and manage all my healthcare
+                    appointments in one place, making my life so much easier.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-05.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    If you're tired of the traditional headache of scheduling
+                    doctor appointments, you need to give this medical
+                    appointment app a try. It's intuitive, user-friendly, and
+                    has completely transformed the way I approach managing my
+                    healthcare.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-06.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    From the moment I started using this medical appointment
+                    app, I knew I had found something special. It's not just
+                    about booking appointments – it's about reclaiming control
+                    over my healthcare experience and making it as seamless as
+                    possible.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="Container-opinien">
+                <div class="profile-opinin">
+                  <img
+                    src="../../img/Clients/client-08.jpg"
+                    alt="First-Client-img-Profile" />
+                </div>
+                <div class="comment">
+                  <h5>Testimonials</h5>
+                  <h1>What Our Clients Says</h1>
+                  <p>
+                    From the moment I started using this medical appointment
+                    app, I knew I had found something special. It's not just
+                    about booking appointments – it's about reclaiming control
+                    over my healthcare experience and making it as seamless as
+                    possible.
+                  </p>
+                  <span> Horikita Manabou</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- !   section opinion clients End  -->
+    </main>
+    <!-- !..... main End .................................................................................................. -->
+    <footer>
+      <div class="Footer-element">
+        <div class="endpage">
+          <ul class="Description">
+            <li><img src="../img/logo.png" alt="Logo" /></li>
+            <li>
+              <p>
+                We Hope you get the best <br />
+                experience with DOCCURE
+              </p>
+            </li>
+          </ul>
+          <ul class="Social-Media">
+            <li><h1>Social Media</h1></li>
+            <li>
+              <i class="fa-brands fa-facebook"></i><a href="#">facebook</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i> <a href="#">instagram</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-twitter"></i><a href="#">Twitter </a>
+            </li>
+            <li>
+              <i class="fa-brands fa-telegram"></i><a href="#"> Telegram</a>
+            </li>
+          </ul>
+
+          <ul class="Contact">
+            <li><h1>Contact Us</h1></li>
+            <li><i class="fa-solid fa-location-dot"></i> 3356 BBA,ALG</li>
+            <li><i class="fa-solid fa-phone"></i> 0554064269</li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>Sayah-Messouafe@gmail.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="End">
+          <ul>
+            <li>A&copy; 2024 Medical Appointment</li>
+            <li>
+              <a href="#">Privacy Police </a> |
+              <a href="#"> Terms and Condition</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--  Swiper Js -->
+    <script src="../jS/swiper-bundle.min.js"></script>
+    <script src="../jS/scroleleftright.js"></script>
+    <script src="../jS/scrole.Js"></script>
+    <script src="../jS/ValidDoucmentPatient.Js"></script>
+  </body>
+</html>

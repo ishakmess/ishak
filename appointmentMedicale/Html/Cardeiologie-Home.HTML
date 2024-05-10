@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Appointment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="shortcut icon" href="../Icons/logo-small.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../Css/Carediologie-Home.CSS" />
+  <link rel="stylesheet" href="../Css/scrole.CSS" />
+</head>
+
+<body>
+  <header>
+    <div class="Logo">
+      <img src="../img/logo.png" alt=" Logo" width="150px" />
+    </div>
+    <div class="menu">
+      <nav>
+        <ul class="heder-Option">
+          <li class="Home">
+            <a href="../Html/generale-Home.html">
+              Home <i class="fa-solid fa-chevron-down"></i></a>
+            <!-- !  Home-option -->
+            <div class="Home-option">
+              <ul>
+                <li>
+                  <a href="../Html/generale-Home.html"><img src="../../img/home/Genral-Home.jpg" alt="img-cardiology" />
+                    <div>Generale Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="../Html/Eye-Care-Home.HTML">
+                    <img src="../../img/home/Eye care.jpg" alt="Eye-Care" />
+                    <div>Eye Care Home</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="../Html/Fertility-Home.Html">
+                    <img src="../../img/home/fitntly.jpg" alt="fitntly" />
+                    <div>Fertility</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- !  Home-option -->
+          </li>
+
+          <li class="Doctors">
+            <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="Doctors-option">
+              <ul>
+                <li>
+                  <a href="./SchduleTiming.HTML">Schedule Timing</a>
+                </li>
+                <li><a href="./PatientList.HTML">Patient List</a></li>
+
+                <li>
+                  <a href="./EditInformationDoc.HTml">Profile Setting</a>
+                </li>
+                <li><a href="./RegisterDoctor.php">Doctors Register</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="Patient">
+            <a href="#">Patient <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="Patient-option">
+              <ul>
+                <li>
+                  <a href="#" class="Doct"> Doctors </a><i class="fa-solid fa-chevron-right"></i>
+                  <ul class="DoctorsOption">
+                    <li>
+                      <a href="./MapGrid.HTML" class="option">Map Grid</a>
+                    </li>
+                    <li>
+                      <a href="./MapList.php" class="option">Map List</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../Html/PatientProfile.HTML">Profile Setting</a>
+                </li>
+                <li><a href="#">Your Situation</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="Page">
+            <a href="#"> Pages<i class="fa-solid fa-chevron-down"></i></a>
+            <div class="Page-option">
+              <ul>
+                <li><a href="../Html/Contact-Us.Html">Contact Us</a></li>
+                <li><a href="../Html/About-Us.Html">About Us</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="Pharmacy">
+            <a href="#">Setting<i class="fa-solid fa-chevron-down"></i> </a>
+            <div class="Pharmacy-option">
+              <ul>
+                <li><a href="#">Languages</a></li>
+                <li><a href="#">Dark-Mode</a></li>
+                <li><a href="#">Light-Mode</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="Blog">
+            <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="Blog-option">
+              <ul>
+                <li><a href="../Html/Blog-list.HTML">Blog List</a></li>
+                <li><a href="../Html/BlogDetails.HTML">Blog Details</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="Login">
+      <i class="fa-regular fa-user"></i>
+      <a href="../Html/Register.php"> Register</a>
+    </div>
+    <div class="Login">
+      <i class="fa-solid fa-lock"></i>
+      <a href="../Html/Login.php"> Singe </a>
+    </div>
+  </header>
+
+  <!-- ! main start............................................................................  -->
+  <main>
+    <!-- ! section Start Consolt start -->
+    <section class="Start-consult">
+      <div class="father">
+        <img src="../../img/heart-dyn.png" alt="hurt-img" class="heart" />
+        <div class="left">
+          <h5>
+            <img src="../../Icons/heart-2.svg" alt="" /> Every Beat ,Every Moment
+          </h5>
+          <h2>
+            Preventive Care Is <br />
+            Essential For <br />
+          </h2>
+          <h1>Healthy Heart</h1>
+          <p>
+            We can guide you through issues like <br />Cardiac arrest, Heart
+            Failure, Peripheral Artery Disease,<br />
+            Arrhythmia, Atrial Fibrillation, Cholesterol and High BP.
+          </p>
+          <div>
+            <a id="Consult"><button>Start Consult</button></a>
+          </div>
+        </div>
+
+        <div class="right">
+          <img src="../../img/banner-cardiologie.png" alt="Bannar-Heart" />
+          <div class="scrole" id="scrole">
+            <i class="fa-solid fa-arrow-up-long"></i>
+          </div>
+        </div>
+      </div>
+      <form>
+        <ul class="form">
+          <!-- <div><img src="/img/heart-plus.svg" alt="heart-plus" /></div>
+            <span>Book An Apppointment</span> -->
+          <li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Doctor,clinics,hospitals" class="Serach" />
+          </li>
+
+          <li>
+            <i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Location " />
+          </li>
+
+          <li><input type="date" /></li>
+          <li><button>Search</button></li>
+        </ul>
+      </form>
+    </section>
+    <!-- ! section Start Consolt end -->
+    <!-- ! Section Why Start -->
+    <section class="why-Doccure">
+      <h2>Why <span>DOCCURE?</span></h2>
+      <div class="container-Card">
+        <div class="Card">
+          <img src="../../Icons/health-care-love.svg"" />
+            <p>
+              Personalized Health <br />
+              care
+            </p>
+          </div>
+          <div class=" Card">
+          <img src="../../Icons/user-doctor.svg" alt="" />
+          <p>
+            World-Leading <br />
+            Experts
+          </p>
+        </div>
+        <div class="Card">
+          <img src="../../Icons/healthcare.svg" />
+          <p>Regularly Check Up</p>
+        </div>
+        <div class="Card">
+          <img src="../../Icons/drugs-svg.svg" />
+          <p>
+            Treatment For <br />
+            Complex Conditions
+          </p>
+        </div>
+        <div class="Card">
+          <img src="../../Icons/syringe-svg.svg" />
+          <p>Minimally Invasive Procedures</p>
+        </div>
+        <div class="Card-last">
+          <img src="../../Icons/health-care.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- ! Section Why End -->
+
+    <!-- !  section Ours Services Start-->
+    <section class="Services">
+      <h1>Ours <span>Services </span></h1>
+      <div class="Services-card">
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/Services1.jpg" alt="img-service1" class="Service-img" />
+            <h2>Heart Valve Disease</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service1.jpg" alt="img-doctors" class="img-doctors" />
+            <p><span>Cardiac Surgery</span><br />Dr.Anoop Shetty</p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/services2.jpg" alt="img-service2" class="Service-img" />
+            <h2>Coronary Artery Disease</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service2.jpg" alt="img-doctors" class="img-doctors" />
+            <p>
+              <span>Cardiac Surgery</span><br />
+              Dr Simon Pearse
+            </p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/service3.jpg" alt="img-service3" class="Service-img" />
+            <h2>High Blood Pressure</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service3.jpg" alt="img-doctors" class="img-doctors" />
+            <p><span>Cardiac Surgery</span><br />Dr.Rajan Sharma</p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/service4.jpg" alt="img-service4" class="Service-img" />
+            <h2>Heart Attack</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service4.jpg" alt="img-doctors" class="img-doctors" />
+            <p><span>Cardiac Surgery</span><br />Heart Palpitations</p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/service5.jpg" alt="img-service1" class="Service-img" />
+            <h2>Heart Palpitations</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service5.jpg" alt="img-doctors" class="img-doctors" />
+            <p><span>Cardiac Surgery</span><br />Dr.Marry Peter</p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+        <div class="container-Card">
+          <div class="head-card">
+            <img src="../../img/Services/service6.jpg" alt="img-service6" class="Service-img" />
+            <h2>Heart Valve Disease</h2>
+          </div>
+          <div class="footer-card">
+            <img src="../../img/Services/Docteur-services/doctor-service6.jpg" alt="img-doctors" class="img-doctors" />
+            <p><span>Cardiac Surgery</span><br />Dr.Juliana</p>
+            <button><a href="../Html/MapList.php">Consult</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !  section Ours Services End-->
+
+    <!-- ! section Need Start  -->
+    <section class="YOu-need">
+      <div class="parent">
+        <div class="left">
+          <h1>Need To Know <span>Cardiac Conditions</span></h1>
+          <ul>
+            <li><button>Heart Valve Disease</button></li>
+            <li><button>Heart Failure</button></li>
+            <li><button>Pacemakers And Defibrillators</button></li>
+          </ul>
+          <h4>Heart Failure</h4>
+          <p>
+            If one of the valves in your heart becomes diseased it can affect
+            the flow of blood. This can happen in one of two ways: valve
+            stenosis (where the valve does not fully open and obstructs or
+            restricts flow) or valve incompetence (where the valve does not
+            close properly and blood is allowed to leak backwards)....
+          </p>
+          <button class="read">read More</button>
+        </div>
+        <div class="right">
+          <div>
+            <img src="../../img/Need/need.jpg" alt="img-nedd" /><img src="../../img/Need/need3.jpg" alt="img-nedd" />
+          </div>
+          <div class="dwen">
+            <img src="../../img/Need/need2.jpg" alt="img-nedd" /><img src="../../img/Need/need4.jpg" alt="img-nedd" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section Need End  -->
+
+    <!-- ! Section Card Doctor Start -->
+    <section class="Card-Doctor">
+      <h2>Our <span>Specialist </span>Doctors</h2>
+      <div class="Card-Father">
+        <div class="Card-CContainer">
+          <div class="header-CCard">
+            <img src="../../img/MAPGRID/cardiology1.jpg" alt="Doctor" class="DoCtor-img" />
+            <br />
+            <div class="Specialité-Doc">
+              <div class="Specialité-génerale">Cardiology</div>
+              <div class="Specialité-Details">Doctor</div>
+            </div>
+          </div>
+          <div>
+            <h3>Dr Yassmin Thmerr</h3>
+            <p>BBA ben ammrane,ALG</p>
+            <button>
+              <a id="consult"> Consult </a>
+            </button>
+          </div>
+        </div>
+        <div class="Card-CContainer">
+          <div class="header-CCard">
+            <img src="../../img/MAPGRID/cardiology2.jpg" alt="Doctor" class="DoCtor-img" />
+            <br />
+            <div class="Specialité-Doc">
+              <div class="Specialité-génerale">Cardiology</div>
+              <div class="Specialité-Details">Doctor</div>
+            </div>
+          </div>
+          <div>
+            <h3>Dr Ammale Sayah</h3>
+            <p>BBA Koucha,ALG</p>
+            <button>
+              <a id="co"> Consult </a>
+            </button>
+          </div>
+        </div>
+        <div class="Card-CContainer">
+          <div class="header-CCard">
+            <img src="../../img/MAPGRID/cardiology3.png" alt="Doctor" class="DoCtor-img" />
+            <br />
+            <div class="Specialité-Doc">
+              <div class="Specialité-génerale">Cardiology</div>
+              <div class="Specialité-Details">Doctor</div>
+            </div>
+          </div>
+          <div>
+            <h3>Dr Amir bn Amour</h3>
+            <p>Alg Bourj Kifane,ALG</p>
+            <button>
+              <a id="cory"> Consult </a>
+            </button>
+          </div>
+        </div>
+        <div class="Card-CContainer">
+          <div class="header-CCard">
+            <img src="../../img/MAPGRID/cardiology4.png" alt="Doctor" class="DoCtor-img" />
+            <br />
+            <div class="Specialité-Doc">
+              <div class="Specialité-génerale">Cardiology</div>
+              <div class="Specialité-Details">Doctor</div>
+            </div>
+          </div>
+          <div>
+            <h3>Dr Mounir Mammer</h3>
+            <p>Stf Ain hjar,ALG</p>
+            <button>
+              <a id="ctm"> Consult </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! Section Card Doctor End -->
+
+    <!-- ! Section Setp start  -->
+    <section class="Setp">
+      <div class="parent">
+        <div class="right">
+          <div>
+            <i class="fa-duotone fa-1"></i>
+            <img src="../../Icons/hreat-pulse.svg" alt="img-nedd" />
+            <h3>Choose Your Doctor</h3>
+          </div>
+          <div>
+            <i class="fa-duotone fa-2"></i>
+            <img src="../../Icons/hreat-pulse.svg" alt="img-nedd" />
+            <h3>Set Appointment</h3>
+          </div>
+          <div>
+            <i class="fa-duotone fa-3"></i>
+            <img src="../../Icons/hreat-pulse.svg" alt="img-nedd" />
+            <h3>Consult With Doctor</h3>
+          </div>
+          <div>
+            <i class="fa-duotone fa-4"></i>
+            <img src="../../Icons/hreat-pulse.svg" alt="img-nedd" />
+            <h3>Get Recommendation</h3>
+          </div>
+        </div>
+        <div class="left">
+          <h1>Easy Steps For <span>New Patients</span></h1>
+          <p>
+            If one of the valves in your heart becomes diseased it can affect
+            the flow of blood. This can happen in one of two ways: valve
+            stenosis (where the valve does not fully open and obstructs or
+            restricts flow) or valve incompetence (where the valve does not
+            close properly and blood is allowed to leak backwards)....
+          </p>
+          <button class="read">
+            <a href="../Html/MapGrid.HTML">Book Appointment</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Section Setp End -->
+
+    <!-- ! Section Opinion Start  -->
+    <section class="Opinin">
+      <img src="../../Icons/medical.png" alt="medical" class="Medical" />
+      <ul>
+        <li class="description">
+          <h1>What Our<span> Patients </span> Says</h1>
+          <p>
+            If one of the valves in your heart becomes diseased it can affect
+            the flow of blood. This can happen in one of two ways: valve
+            stenosis (where the valve does not fully open and obstructs or
+            restricts flow) or valve incompetence (where the valve does not
+            close properly and blood is allowed to leak backwards)....
+          </p>
+          <img src="../../Icons/health-care.png" alt="" />
+        </li>
+        <li class="Colection-coment">
+          <ul class="comment">
+            <img src="../../Icons/radio.png" alt="radio" class="radio" />
+            <li class="Client1">
+              <img src="../../img/Clients/client-001.jpg" alt="client-001" />
+              <div>
+                Martin Philips <br /><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i
+                  class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
+              </div>
+              <p>
+                After suffering from a heart condition for a number of years I
+                was very happy to meet Doccure, from the first consultation
+                where
+              </p>
+            </li>
+            <li class="Client2">
+              <img src="../../img/Clients/client-002.jpg" alt="client-002" />
+              <div>
+                Christina Louis <br />
+                <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i
+                  class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i>
+              </div>
+              <p>
+                “ I Am Very Grateful ” Doctors explains everything clearly and
+                helps you to understand even the most complex medical terms
+              </p>
+            </li>
+            <li class="Client3">
+              <img src="../../img/Clients/client-003.jpg" alt="client-003" />
+              <div>
+                Horikita Souzeni <br /><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i
+                  class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i
+                  class="fa-solid fa-circle-half-stroke"></i>
+              </div>
+              <p>
+                Excellent clinician. Endlessly patient and reassuring.Also a
+                very efficient back up team. He was prepared to spend as long
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- ! Section Opinion End -->
+
+    <!-- ! Section Answer Start -->
+
+    <section class="Answer">
+      <h5>Get your answer</h5>
+      <h2><span>Frequently</span> Asked Questions</h2>
+      <ul class="Container-Ansewr">
+        <li><img src="../../img/ansewr.png" alt="" /></li>
+        <li>
+          <ul class="Answwr">
+            <li>
+              <input type="radio" name="acc" id="first" checked />
+              <label for="first">
+                How do I cancel or reschedule my appointment?</label>
+              <div class="content">
+                <p class="Repense">
+                  To cancel or reschedule your appointment, you can log in to
+                  your account on the website or call the clinic directly.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="acc" id="secend" />
+              <label for="secend">
+                Can I choose a specific doctor or specialist for my
+                appointment?</label>
+              <div class="content">
+                <p class="Repense">
+                  To cancel or reschedule your appointment, you can log in to
+                  your account on the website or call the clinic directly.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="acc" id="therd" />
+              <label for="therd">
+                Is there a waiting list for earlier appointment slots if one
+                becomes available?</label>
+              <div class="content">
+                <p class="Repense">
+                  To cancel or reschedule your appointment, you can log in to
+                  your account on the website or call the clinic directly.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="acc" id="fourth" />
+              <label for="fourth">
+                How can I check the availability of appointments for a
+                particular date or</label>
+              <div class="content">
+                <p class="Repense">
+                  To cancel or reschedule your appointment, you can log in to
+                  your account on the website or call the clinic directly.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="acc" id="fivth" />
+              <label for="fivth">
+                How can I check the availability of appointments for a
+                particular date</label>
+              <div class="content">
+                <p class="Repense">
+                  To cancel or reschedule your appointment, you can log in to
+                  your account on the website or call the clinic directly.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ! Section Answer End -->
+  </main>
+
+  <!-- ! main End -->
+
+  <footer>
+    <div class="Footer-element">
+      <div class="endpage">
+        <ul class="Description">
+          <li><img src="../img/logo.png" alt="Logo" /></li>
+          <li>
+            <p>
+              We Hope you get the best <br />
+              experience with DOCCURE
+            </p>
+          </li>
+        </ul>
+        <ul class="Social-Media">
+          <li>
+            <h1>Social Media</h1>
+          </li>
+          <li>
+            <i class="fa-brands fa-facebook"></i><a href="#">facebook</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram"></i> <a href="#">instagram</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter"></i><a href="#">Twitter </a>
+          </li>
+          <li>
+            <i class="fa-brands fa-telegram"></i><a href="#"> Telegram</a>
+          </li>
+        </ul>
+
+        <ul class="Contact">
+          <li>
+            <h1>Contact Us</h1>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> 3356 BBA,ALG</li>
+          <li><i class="fa-solid fa-phone"></i> 0554064269</li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>Sayah-Messouafe@gmail.com
+          </li>
+        </ul>
+      </div>
+
+      <div class="End">
+        <ul>
+          <li>A&copy; 2024 Medical Appointment</li>
+          <li>
+            <a href="#">Privacy Police </a> |
+            <a href="#"> Terms and Condition</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="../jS/scrole.Js"></script>
+  <script src="../jS/BoitdePatient.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,830 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}body > header > img{
+  width: 70px;
+}
+body {
+  background-color: #ffffff;
+  height: fit-content;
+  position: relative;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+/* ! Main start ........................................................................................................... */
+
+/* ! Section About Us Start  */
+
+main .About {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+  background-color: #f2f6f6;
+}
+main .About h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+main .About h5 {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body > main > section > h5 > span:nth-child(1) > a {
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 20px;
+  color: #007fff;
+}
+/* ! Section About Us End   */
+
+/* ! Section About Us Details start  */
+main .About-details {
+  padding: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .About-details .right {
+  display: flex;
+  margin-left: 15px;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  flex-direction: column;
+  padding-top: 0%;
+  justify-content: space-around;
+}
+main .About-details .right h6 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #007fff;
+}
+main .About-details .right h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+main .About-details .right h1 span {
+  color: #007fff;
+}
+main .About-details .left {
+  width: 50%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+main .About-details .left div {
+  width: 35%;
+  margin-right: 45px;
+}
+body > main > section.About-details > div.right > p {
+  line-height: 45px;
+  font-weight: 600;
+}
+body > main > section.About-details > div.left > div:nth-child(1) > div {
+  background-color: #007fff;
+  color: #f2f6f6;
+  height: 193px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 289px;
+}
+body > main > section.About-details > div.left > div:nth-child(1) > div > p {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 550;
+}
+.smal-icon {
+  background-color: #007fff;
+  padding: 15px;
+  border-radius: 50%;
+}
+body > main > section.About-details > div.right > div > span {
+  color: rgba(112, 128, 144);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* ! Section About Us Details End  */
+/* ! section why us start  */
+main .whyus {
+  padding: 25px;
+}
+main .whyus h1 {
+  text-align: center;
+  font-size: 54px;
+}
+main .whyus ul {
+  margin-top: 80px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+main .whyus ul li {
+  padding: 20px;
+  margin-left: 15px;
+  background: rgba(242, 246, 246);
+  border-radius: 15px;
+  padding-top: 50px;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+}
+main .whyus ul li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .whyus ul li span {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #007fff;
+  padding: 30px;
+  border-radius: 50%;
+}
+body > main > section.whyus > ul > li:nth-child(1) > div > p {
+  margin-top: 25px;
+}
+body > main > section.whyus > ul > li > div > p {
+  /* color: #; */
+  font-weight: 600;
+  font-size: 18px;
+  color: rgba(112, 128, 144);
+}
+body > main > section.whyus > ul > li > div > h2 {
+  margin-bottom: 10px;
+}
+main .whyus ul li img {
+  transition: 0.75s;
+}
+main .whyus ul li img:hover {
+  transform: rotate(360deg);
+}
+main .whyus ul li:nth-child(1) img:hover,
+main .whyus ul li:nth-child(4) img:hover {
+  transform: rotateY(360deg);
+}
+/* ! section why us end  */
+
+/* ! section Contact start  */
+main .Contact {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .Contact div {
+  width: 80%;
+  height: 79%;
+  background: url(/img/about-us/Contact.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+main .Contact div::after {
+  content: url(/img/about-us/contact.png);
+  right: 50%;
+  /* height: 100%; */
+  /* width: 60%; */
+  position: absolute;
+  right: 0%;
+  bottom: -1%;
+}
+body > main > section.Contact > div > h1 {
+  /* font-size: 48px; */
+  color: #f2f6f6;
+  font-weight: 600;
+  font-size: 48px;
+  margin: 50px;
+}
+body > main > section.Contact > div > button {
+  margin: 60px;
+  padding: 10px 40px;
+  background-color: #f2f6f6;
+  border-radius: 10px;
+  border: 2px solid #f2f6f6;
+}
+body > main > section.Contact > div > button:hover {
+  background-color: #007fff;
+  border: 2px solid #f2f6f6;
+  color: #007fff;
+}
+body > main > section.Contact > div > button:hover a {
+  color: #f2f6f6;
+}
+body > main > section.Contact > div > button > a {
+  text-decoration: none;
+  color: #007fff;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/* ! section Contact End */
+
+/*! section answer  start */
+main .Answer {
+  margin-top: 50px;
+}
+main .Answer h5 {
+  color: #007fff;
+  font-size: 28px;
+  text-align: center;
+}
+main .Answer h2 {
+  text-align: center;
+}
+main .Answer .Container-Ansewr {
+  list-style: none;
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  background-color: rgba(112, 128, 144, 0.3);
+  /*   text-align: center; */
+  padding: 20px;
+
+  border-radius: 5px;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  margin-top: 4px;
+}
+main .Answer .Container-Ansewr:last-child ul li button {
+  float: right;
+
+  margin-left: 10px;
+  border: 2px solid #dbd7d2;
+  border-radius: 30%;
+  transform: translateX(-10);
+}
+
+main .Answer .Container-Ansewr:last-child ul li .Repense {
+  text-align: left;
+  padding-top: 20 px;
+}
+
+/*! section answer  start */
+
+main .Answer {
+  margin-top: 50px;
+}
+main .Answer h5 {
+  color: #007fff;
+  font-size: 28px;
+  text-align: center;
+}
+main .Answer h2 {
+  text-align: center;
+}
+main .Answer .Container-Ansewr {
+  list-style: none;
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  background-color: rgba(112, 128, 144, 0.3);
+  /*   text-align: center; */
+  padding: 20px;
+
+  border-radius: 5px;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  margin-top: 4px;
+}
+
+body main section.Answer ul li {
+  list-style: none;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+body main section.Answer ul li label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+body main section.Answer ul li label::before {
+  content: "+";
+  color: #0e82fd;
+  font-weight: 900;
+  font-size: 25px;
+  margin-right: 10px;
+}
+body main section.Answer ul li input[type="radio"] {
+  display: none;
+}
+.content p {
+  color: #1f2937;
+  font-size: 20px;
+}
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+body main section.Answer ul li input[type="radio"]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+body main section.Answer ul li input[type="radio"]:checked + label::before {
+  content: "-";
+  color: #0e82fd;
+  font-weight: 900;
+  margin-right: 10px;
+}
+/*! section answer  end */
+
+/*! section answer  end */
+
+/*! section opinion start*/
+main .opinie {
+  position: relative;
+}
+main .opinien .Container-opinien {
+  display: flex;
+  z-index: 99999;
+  height: 500px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+main .opinien .Container-opinien::after {
+  content: url(/img/about-us/afterbefor.jpg);
+  position: absolute;
+
+  right: 0%;
+}
+.Container-opinien::before {
+  content: url(/img/afterbefor.jpg);
+  position: absolute;
+  margin-top: 500px;
+  left: 0%;
+}
+main .opinien .Container-opinien img {
+  width: 50%;
+  border-radius: 50%;
+}
+main .opinien .Container-opinien div {
+  width: 35%;
+}
+main .opinien .Container-opinien .comment {
+  width: 50%;
+}
+main .opinien .Container-opinien .comment h5 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: rgb(14, 130, 253);
+  color: rgba(112, 128, 144);
+}
+main .opinien .Container-opinien .comment h1 {
+  font-size: 46px;
+  margin-top: 2px;
+  color: black;
+}
+main .opinien .Container-opinien .comment h1::after {
+  content: url(/Icons/header-icon.svg);
+  position: absolute;
+  transform: translateY(-13px);
+}
+main .opinien .Container-opinien .comment p {
+  color: rgb(75, 79, 81);
+  font-size: 20px;
+}
+main .opinien .Container-opinien .comment span {
+  color: rgba(112, 128, 144);
+  font-size: 18px;
+}
+/*! section opinion  end */
+/* ! Main End  ........................................................................................................... */
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}

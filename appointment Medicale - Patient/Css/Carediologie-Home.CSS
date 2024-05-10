@@ -1,0 +1,1324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > header > img {
+  width: 70px;
+}
+body {
+  background-color: #ffffff;
+  height: 900vh;
+  position: relative;
+}
+header {
+  position: sticky;
+  top: 0;
+  /*  z-index: 1000; */
+  width: 100%;
+  background-color: #f2f6f6;
+  color: #1f2937 !important;
+  display: flex;
+  padding: 20px 100px;
+  align-items: flex-start;
+  z-index: 99999;
+}
+header .Logo {
+  margin-right: 0;
+  padding-right: 0;
+  margin-top: 10px;
+}
+
+header .menu ul {
+  list-style: none;
+  display: flex;
+}
+header .menu {
+  margin-left: 0;
+}
+header .menu ul li,
+.Login {
+  padding: 23px 28px;
+  font-size: 17px;
+  margin: 0px 10px 0px 0px;
+}
+header .menu ul li:first-child {
+  margin-left: 20px;
+}
+header .menu ul li:nth-child(7) {
+  margin-right: 100px;
+}
+header .menu ul li:last-child {
+  margin-right: 40px;
+}
+header .menu ul a {
+  text-decoration: none;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+header .menu ul li a:hover {
+  color: #4169e1;
+}
+header .Login a {
+  color: #f2f6f6;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+header .menu ul li i {
+  float: right;
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+header .Login {
+  border: 3px solid #4169e1;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #4169e1;
+  display: flex;
+}
+header .Login i {
+  color: #f2f6f6;
+  font-weight: 550;
+  margin-right: 5px;
+}
+body > header > div:nth-child(3) {
+  background-color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover {
+  background-color: #0e82fd;
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover i {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3):hover a {
+  color: #f2f6f6;
+}
+body > header > div:nth-child(3) > i {
+  color: #0e82fd;
+  margin-left: 5px;
+  font-weight: 550;
+}
+body > header > div:nth-child(3) > a {
+  color: #0e82fd;
+}
+header .Login:hover {
+  background-color: whitesmoke;
+  color: #4169e1;
+}
+header .Login:hover a {
+  color: #007fff;
+}
+header .Login:hover i {
+  color: #007fff;
+}
+header .menu .Search i:hover {
+  padding: 10px 10px;
+  background-color: #007fff;
+  border-radius: 40px;
+}
+main {
+  color: black;
+}
+body > header > div.menu > nav > ul > li > div > ul > li > a {
+  transition: transform 0.3s ease;
+  display: flex;
+}
+body > header > div.menu > nav > ul > li > div > ul > li:hover a {
+  transform: translate(0, -5px);
+  color: #0e82fd;
+}
+
+body > header > div.menu > nav > ul > li.Home > div > ul > li a {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Home > div > ul > li a:hover {
+  transform: translate(0, -10px);
+  color: #0e82fd;
+}
+/*! Home Option    */
+header .menu nav ul li .Home-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Home-option div {
+  text-align: center;
+}
+header .menu nav ul li .Home-option ul {
+  margin-top: 2px;
+  background-color: #f2f6f6;
+}
+
+header .menu nav ul li .Home-option ul li {
+  margin-left: 0px;
+}
+
+header .menu nav ul .Home:hover .Home-option {
+  display: block;
+}
+/*! Home Option    */
+
+/* todo  Doctors-option Start*/
+
+header .menu nav ul li .Doctors-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Doctors-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Doctors-option ul li {
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+  margin-left: 0px;
+}
+header .menu nav ul li .Doctors-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Doctors:hover .Doctors-option {
+  display: block;
+}
+
+/* todo  Doctors-option End*/
+
+/*! Patient Option             */
+
+header .menu ul li .Patient-option {
+  position: absolute;
+}
+header .menu ul li .Patient-option ul {
+  display: block;
+  background-color: #f2f6f6;
+}
+header .menu ul li .Patient-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu ul li .Patient-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu ul li .Patient-option {
+  display: none;
+}
+header .menu ul .Patient:hover .Patient-option {
+  display: block;
+}
+body > header > div.menu > nav > ul > li.Patient > div > ul > li:nth-child(1) {
+  position: relative;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > i {
+  right: 5%;
+  top: 35%;
+}
+
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  position: absolute;
+  margin-left: 130px;
+  width: 100%;
+  top: -1px;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul {
+  display: none;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1):hover
+  .DoctorsOption {
+  display: block;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+body
+  > header
+  > div.menu
+  > nav
+  > ul
+  > li.Patient
+  > div
+  > ul
+  > li:nth-child(1)
+  > ul
+  > li
+  > a {
+  display: flex;
+}
+
+.option {
+  transition: transform 0.3s ease;
+  display: flex;
+  transform: translate(0px, 0px) !important;
+  color: rgba(112, 128, 144, 0.5);
+}
+.option:hover {
+  transform: translate(0, -5px) !important;
+}
+
+/* ! Patient Option             */
+
+/*?  page Option */
+header .menu nav ul .Page-option {
+  position: absolute;
+}
+header .menu nav ul .Page-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul .Page-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul .Page-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Page-option {
+  display: none;
+}
+header .menu nav ul .Page:hover .Page-option {
+  display: block;
+}
+
+/*?  page Option End */
+
+/*! Pharmacy option Start*/
+header .menu nav ul li .Pharmacy-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Pharmacy-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+header .menu nav ul li .Pharmacy-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Pharmacy-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Pharmacy:hover .Pharmacy-option {
+  display: block;
+}
+/*! Pharmacy option  End*/
+
+/*todo   Blog option*/
+header .menu nav ul li .Blog-option {
+  position: absolute;
+  display: none;
+}
+header .menu nav ul li .Blog-option ul {
+  display: block;
+  background-color: #f2f6f6;
+  margin-top: 2px;
+}
+
+header .menu nav ul li .Blog-option ul li {
+  margin-left: 0px;
+  border-bottom: 2px solid rgba(112, 128, 144, 0.5);
+}
+header .menu nav ul li .Blog-option ul li:last-child {
+  border-bottom: none;
+}
+header .menu nav ul .Blog:hover .Blog-option {
+  display: block;
+}
+/*todo   Blog option End */
+/* !                                 main Start                                                      */
+
+/* ! section Start-consult START */
+main .Start-consult {
+  position: relative;
+  color: #f2f6f6;
+}
+main .Start-consult {
+  background: url(/img/cardiologie.png);
+  background-size: cover;
+  height: 600px;
+}
+main .Start-consult .father .heart {
+  position: absolute;
+  bottom: 20%;
+  z-index: 1;
+  left: 35%;
+  width: 35%;
+  animation-name: grow;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes grow {
+  to {
+    width: 33%;
+  }
+}
+main .father {
+  display: flex;
+  padding: 20px;
+}
+main .fathe .right,
+.left {
+  width: 50%;
+}
+main .father .right img {
+  position: relative;
+  z-index: 30;
+  width: 80%;
+  margin-left: 20px;
+}
+main .father .left {
+  padding: 20px;
+}
+main .father .left h5 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+main .father .left h2 {
+  font-size: 48px;
+  margin-top: 30px;
+}
+main .father .left h1 {
+  margin-top: 10px;
+  font-size: 58px;
+  margin-bottom: 30px;
+}
+main .father .left p {
+  font-size: 19px;
+}
+main .father .left button {
+  position: absolute;
+  left: 20%;
+  width: 200px;
+  margin-top: 35px;
+  padding: 14px 40px;
+  border-radius: 35px;
+  background-color: #f2f6f6;
+  color: #007fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid #f2f6f6;
+}
+main .father .left button:hover {
+  background-color: #007fff;
+  color: #f2f6f6;
+  border: 2px solid #f2f6f6;
+  cursor: pointer;
+}
+/*  ! FORM start   */
+
+.form {
+  position: relative;
+  list-style: none;
+  display: flex;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  padding: 15px 5px;
+  max-width: 800px;
+  border-radius: 10px;
+  transform: translateX(200px);
+}
+
+.form li {
+  margin-left: 5px;
+  border-left: 2px solid rgba(112, 128, 144, 0.5);
+  padding: 10px;
+}
+.form li:first-child {
+  border-left: none;
+}
+.form li:last-child {
+  border-left: none;
+}
+.form li input {
+  border: none;
+  outline: none;
+}
+.form li i {
+  padding: 5px;
+}
+
+.form li button {
+  position: absolute;
+  background-color: #007fff;
+  border: 2px solid #007fff;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: -10px;
+  margin-left: 50px;
+}
+main .Start-consult .form li button:hover {
+  background-color: whitesmoke;
+  color: #007fff;
+  cursor: pointer;
+}
+body > main > section > form > span {
+  color: black !important;
+}
+/*  ! FORM end  */
+
+/* ! section Start-consult End */
+/* ! Section Why Start */
+main .why-Doccure {
+  margin-top: 100px;
+  width: 100%;
+}
+main .why-Doccure h2 {
+  text-align: center;
+  font-size: 48px;
+}
+main .why-Doccure h2 span {
+  color: #007fff;
+}
+main .why-Doccure h2 span::after {
+  content: url(../img/header-icon.svg);
+  color: rgba(112, 128, 144, 0.5);
+}
+main .why-Doccure .container-Card {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+main .why-Doccure .container-Card .Card {
+  border: 2px solid rgba(112, 128, 144, 0.3);
+  padding: 20px;
+  width: 180px;
+  padding-bottom: 50px;
+  margin-right: 20px;
+  border-radius: 20px 0px;
+  text-align: center;
+}
+main .why-Doccure .container-Card .Card p {
+  transform: translateY(15px);
+}
+main .why-Doccure .container-Card .Card img {
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+  background-color: rgba(0, 127, 255, 0.09);
+  transition: 0.5s;
+}
+main .why-Doccure .container-Card .Card img:hover {
+  transform: rotate(360deg);
+}
+
+main .why-Doccure .container-Card .Card-last {
+  border: none;
+  margin-left: 50px;
+  outline: none;
+  transform: translateY(50px);
+  /* position: absolute; */
+}
+main .why-Doccure .container-Card .Card-last img {
+  animation-name: Move;
+  width: 120%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+@keyframes Move {
+  to {
+    width: 90%;
+  }
+}
+
+/* ! Section Why End */
+/* ! Section Services Start  */
+main .Services {
+  background: url(/img/background/background-1.jpg) no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+}
+main .Services h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 80px;
+}
+main .Services h1 span {
+  color: #007fff;
+}
+main .Services .Services-card .container-Card {
+  padding: 20px;
+  background-color: #f2f6f6;
+  color: #007fff;
+  height: 303px;
+  width: 370px;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+main .Services .Services-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .Services .Services-card .container-Card .Service-img {
+  width: 330px;
+  border-radius: 20px;
+  height: 166px;
+
+  transition: 0.3s ease-in-out;
+  -webkit-filter: grayscale(100%) blur(3px);
+  filter: grayscale(0%) blur(3px);
+}
+main .Services .Services-card .container-Card .Service-img:hover {
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  -webkit-transition: 0.3s ease-in-out;
+}
+main .Services .Services-card .container-Card h2 {
+  margin-top: 2%;
+  text-align: center;
+}
+main .Services .Services-card .img-doctors {
+  width: 48px;
+  height: 48.8px;
+  border-radius: 50%;
+}
+.footer-card p {
+  color: black;
+}
+.footer-card span {
+  color: rgba(112, 128, 144, 0.99);
+  font-size: 17px;
+}
+
+.footer-card button {
+  width: 120px;
+  height: 38px;
+  cursor: pointer;
+  padding: 6px 30px;
+  background-color: #007fff;
+  border: 2px solid #f2f6f6;
+  border-radius: 20px;
+}
+.footer-card button a {
+  text-decoration: none;
+  color: #f2f6f6;
+}
+.footer-card button a:hover {
+  color: #007fff;
+}
+.footer-card button:hover {
+  background-color: #f2f6f6;
+  border: 2px solid #007fff;
+  color: #007fff;
+}
+
+.footer-card button:hover a {
+  color: #007fff;
+}
+
+/* ! Section Services End */
+
+/* ! Section *NEED Start  */
+main .YOu-need {
+  margin-top: 30px;
+  width: 100%;
+}
+main .YOu-need .parent {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+main .YOu-need .parent .left {
+  width: 85%;
+}
+main .YOu-need .parent .right {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .YOu-need .parent .right div {
+  width: 50%;
+}
+main .YOu-need .parent .right img {
+  width: 200px;
+  border-radius: 20px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+main .YOu-need .parent .right .dwen {
+  margin-top: 20px;
+}
+main .YOu-need .parent .left {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .YOu-need .parent .left h1 {
+  position: relative;
+  margin-left: 20px;
+  transform: translateY(-40px);
+  font-size: 48px;
+}
+main .YOu-need .parent .left h1 span {
+  color: rgba(112, 128, 144, 0.5);
+  color: #007fff;
+}
+main .YOu-need .parent .left ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+main .YOu-need .parent .left ul li button {
+  padding: 10px 20px;
+  border-color: #007fff;
+  border-radius: 20px;
+  color: #007fff;
+  background-color: rgba(112, 128, 144, 0.1);
+}
+main .YOu-need .parent .left ul li button:hover {
+  cursor: pointer;
+  color: #f2f6f6;
+  background-color: #007fff;
+}
+main .YOu-need .parent .left h4 {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 0%;
+  margin: 10px 10px 0px;
+}
+
+main .YOu-need .parent .left p {
+  font-size: 19px;
+  margin-left: 10px;
+  color: rgb(112, 128, 144);
+}
+main .YOu-need .parent .left .read {
+  text-align: center;
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #f2f6f6;
+  background-color: #007fff;
+  border-color: #007fff;
+  margin-top: 20px;
+}
+main .YOu-need .parent .left .read:hover {
+  background-color: #f2f6f6;
+  color: #007fff;
+  border-color: #007fff;
+}
+
+/* ! Section *NEED End */
+
+/* ! Section Card Doctor */
+
+main .Card-Doctor {
+  background-color: rgba(112, 128, 144, 0.2);
+  height: 800px;
+  width: 100%;
+  display: flex;
+}
+main .Card-Doctor h2 {
+  height: fit-content;
+  position: absolute;
+  margin-top: 20px;
+  right: 60%;
+  font-size: 49px;
+}
+main .Card-Doctor h2::after {
+  content: url(/Icons/header-icon.svg);
+  position: absolute;
+}
+main .Card-Doctor h2 span {
+  color: #007fff;
+}
+main .Card-Doctor .Card-Father {
+  width: 100%;
+  /*   height: 200px; */
+  height: auto;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+}
+main .Card-Doctor .Card-Father .Card-CContainer {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.03);
+  border-radius: 35px;
+  padding: 20px;
+  height: auto;
+  border: 2px solid rgba(112, 128, 144, 0.5);
+  width: 250px;
+  background-color: #f2f6f6;
+}
+main .Card-Doctor .Card-Father .Card-CContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer .DoCtor-img {
+  border-radius: 20px;
+  width: 249px;
+  height: 249px;
+  margin-bottom: 15px;
+  transition: 0.5s;
+  width: 100%;
+}
+main .Card-Doctor .Card-Father .Card-CContainer .header-CCard {
+  text-align: center;
+}
+.Specialité-Doc {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  transition: 0.7s;
+  text-align: center;
+}
+main
+  .Card-Doctor
+  .Card-Father
+  .Card-CContainer
+  .header-CCard
+  .Specialité-Details {
+  background: #ddd6fe;
+  color: #7c3aed;
+  padding: 10px;
+}
+main
+  .Card-Doctor
+  .Card-Father
+  .Card-CContainer
+  .header-CCard
+  .Specialité-génerale {
+  background: #ccfbf1;
+  color: #14b8a6;
+  padding: 10px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer .Specialité-Details:hover,
+.Specialité-génerale:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+main .Card-Doctor .Card-Father .Card-CContainer h3 {
+  margin-bottom: 0%;
+  display: contents;
+  margin-left: 8px;
+  margin-top: 5px;
+  font-size: 22px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer p {
+  margin: 0%;
+  color: rgba(112, 128, 144, 0.9);
+  margin-left: 7px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button {
+  padding: 10px 30px;
+  margin-left: 7px;
+  border-radius: 25px;
+  border: 2px solid #007fff;
+  background-color: #007fff;
+  margin-top: 10px;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button:hover {
+  border: 1px solid #007fff;
+  background-color: #f2f6f6;
+  color: #007fff;
+}
+main .Card-Doctor .Card-Father .Card-CContainer button:hover a {
+  color: #007fff;
+}
+
+main .Card-Doctor .Card-Father .Card-CContainer .fa-solid {
+  position: absolute;
+  background-color: #f2f6f6;
+  padding: 5px;
+  margin: 5px 6px;
+  border-radius: 10px;
+}
+
+main .Card-Doctor .Card-Father .Card-CContainer button a {
+  text-decoration: none;
+  color: #f0ffff;
+}
+
+/* ! Section Card End */
+
+/* ! Section Setp Start  */
+
+main .Setp {
+  width: 100%;
+  background-color: rgba(112, 128, 144, 0.1);
+  height: auto;
+  display: flex;
+}
+main .Setp .parent {
+  display: flex;
+  padding: 25px;
+}
+main .Setp .parent .right h3 {
+  color: #f2f6f6;
+  font-weight: 600;
+  font-size: 24px;
+}
+main .Setp .parent .right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+main .Setp .parent .right div {
+  width: 40%;
+
+  background-color: #708090e6;
+  margin: 10px 20px;
+  padding-bottom: 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+main .Setp .parent .right .fa-duotone {
+  position: absolute;
+  transform: translateX(105px);
+  margin-top: 27px;
+  color: #007fff;
+  font-size: 48px;
+  color: #0e82fd;
+  font-weight: 700;
+}
+
+main .Setp .parent .right img {
+  width: 200px;
+  border-radius: 20px;
+  text-align: right;
+  margin-bottom: 20px;
+  margin: 20px 20px;
+}
+main .Setp .parent .right .dwen {
+  margin-top: 20px;
+}
+
+main .Setp .parent .left {
+  padding: 10px;
+  margin-left: 20px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .Setp .parent .left h1 {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 15px;
+  transform: translateY(-40px);
+  font-size: 48px;
+}
+main .Setp .parent .left h1 span {
+  color: rgba(112, 128, 144, 0.5);
+  color: #007fff;
+}
+main .Setp .parent .left h4 {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 0%;
+  margin-left: 100px;
+}
+
+main .Setp .parent .left p {
+  font-size: 19px;
+
+  margin-left: 20px;
+  color: rgb(112, 128, 144);
+}
+main .Setp .parent .left .read {
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: #007fff;
+  border-color: #007fff;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+main .Setp .parent .left .read a {
+  text-decoration: none;
+  color: #f2f6f6;
+}
+main .Setp .parent .left .read a:hover {
+  color: #007fff;
+}
+main .Setp .parent .left .read:hover a {
+  color: #007fff;
+}
+main .Setp .parent .left .read:hover {
+  background-color: #f2f6f6;
+  color: #007fff;
+  border-color: #007fff;
+}
+
+/* ! Section Setp End */
+
+/* ! Section opinion Start  */
+
+main .Opinin {
+  width: auto;
+  padding: 20px;
+  height: 650px;
+  background-color: rgba(112, 128, 144, 0.3);
+}
+main .Opinin .Medical {
+  width: 100px;
+  position: absolute;
+  margin-left: 50px;
+}
+main .Opinin ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .Opinin ul .Colection-coment {
+  width: 80%;
+}
+main .Opinin ul .Colection-coment .radio {
+  width: 30%;
+}
+main .Opinin ul .description h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+}
+main .Opinin ul .description h1 span {
+  color: #007fff;
+}
+main .Opinin ul .description p {
+  font-size: 20px;
+  width: 100%;
+  margin-left: 20px;
+  line-height: 29px;
+}
+main .Opinin ul .description img {
+  margin-top: 30px;
+  animation: Grows;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+}
+@keyframes Grows {
+  to {
+    width: 25%;
+  }
+}
+main .Opinin ul .description {
+  width: 50%;
+  position: relative;
+}
+main .Opinin ul .comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .Opinin ul .comment li {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border: 2px solid #f2f6f6;
+  border-radius: 35px;
+  width: 50%;
+  text-align: center;
+}
+
+main .Opinin ul .comment li img {
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+}
+main .Opinin ul .comment p {
+  width: 100%;
+  margin-top: 10px;
+  color: #2a3439;
+}
+main .Opinin ul .comment li {
+  width: 35%;
+  margin-top: 15px;
+  background-color: #f2f6f6;
+}
+main .Opinin ul .comment li div {
+  position: absolute;
+  transform: translateX(100px);
+  margin-top: 35px;
+  padding: 10px;
+  color: rgba(112, 128, 144, 0.8);
+}
+main .Opinin ul .comment li div i {
+  color: #ffca42;
+  padding: 2px;
+}
+main .Opinin ul .comment .Client1 {
+  transform: translateX(-200px);
+}
+main .Opinin ul .comment .Client3 {
+  transform: translateX(-200px);
+  margin-top: 0px;
+  margin-top: 50px;
+}
+main .Opinin ul .comment .Client2 {
+  transform: translateX(200px);
+  position: absolute;
+  margin-top: 75px;
+  width: 280px;
+}
+
+/* ! Section opinion End */
+
+/* ! Section Answer Start  */
+
+main .Answer {
+  height: 800px;
+  padding: 25px;
+  position: relative;
+  background-color: rgba(0, 127, 255);
+}
+main .Answer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 48px;
+  color: #f2f6f6;
+}
+main .Answer .Container-Ansewr {
+  list-style: none;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+body > main > section.Answer > ul > li:nth-child(1) {
+  text-align: center;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  background-color: #f2f6f6 !important;
+  padding: 20px;
+  border-radius: 5px;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  margin-top: 4px;
+}
+main .Answer .Container-Ansewr:last-child ul li button {
+  float: right;
+
+  margin-left: 10px;
+  border: 2px solid #dbd7d2;
+  border-radius: 30%;
+  transform: translateX(-10);
+}
+
+main .Answer .Container-Ansewr:last-child ul li .Repense {
+  border-top: 2px solid rgba(112, 128, 144, 0.2);
+  text-align: left;
+  padding-top: 20 px;
+}
+main .Answer .Container-Ansewr .img-Answer {
+  width: 80%;
+  border-radius: 35px;
+  height: 100%;
+  border: 4px solid #f2f6f6;
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+body > main > section.Answer > img {
+  text-align: center;
+  transform: translateX(500px);
+}
+
+main .Answer {
+  margin-top: 50px;
+}
+main .Answer h5 {
+  color: #007fff;
+  font-size: 28px;
+  text-align: center;
+}
+main .Answer h2 {
+  text-align: center;
+}
+main .Answer .Container-Ansewr {
+  list-style: none;
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  background-color: rgba(112, 128, 144, 0.3);
+  /*   text-align: center; */
+  padding: 20px;
+
+  border-radius: 5px;
+}
+main .Answer .Container-Ansewr:last-child ul li {
+  margin-top: 4px;
+}
+
+body main section.Answer ul li {
+  list-style: none;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+body main section.Answer ul li label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+body main section.Answer ul li label::before {
+  content: "+";
+  color: #0e82fd;
+  font-weight: 900;
+  font-size: 25px;
+  margin-right: 10px;
+}
+body main section.Answer ul li input[type="radio"] {
+  display: none;
+}
+.content p {
+  color: #1f2937;
+  font-size: 20px;
+}
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+body main section.Answer ul li input[type="radio"]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+body main section.Answer ul li input[type="radio"]:checked + label::before {
+  content: "-";
+  color: #0e82fd;
+  font-weight: 900;
+  margin-right: 10px;
+}
+/* ! Section Answer End */
+/* !                                 main End .................. .............................................  */
+
+/*! Footer*/
+footer {
+  width: 100%;
+  background-color: #f2f6f6;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+}
+footer .Footer-element {
+  display: flex;
+  flex-direction: column;
+}
+footer .endpage {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+}
+footer .endpage ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+footer ul li a,
+li {
+  text-decoration: none;
+  color: #1f2937;
+}
+footer .endpage ul li i {
+  margin-right: 5px;
+}
+/*! Footer*/
+footer .endpage ul li a:hover {
+  font-weight: 600;
+  color: #007fff;
+}
+footer .End {
+  margin-top: 80px;
+}
+footer .End ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .End ul li:first-child {
+  margin-left: 200px;
+}
+footer .End ul li:last-child {
+  margin-right: 200px;
+}
