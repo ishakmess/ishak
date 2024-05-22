@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['client_id'] = $result['id_patient']; // Suppose que l'ID de l'utilisateur est stocké dans la colonne 'id' de la table 'patient'
             $_SESSION['client_email'] = $result['email']; // Stockez d'autres informations de l'utilisateur si nécessaire
 
-           header('location:../../appointment Medicale - Patient/Html/PatientProfile.HTML');
+           header('location:../../appointment Medicale - Patient/Html/PatientProfile.php');
             exit(); // Assurez-vous de sortir après avoir redirigé l'utilisateur
         } else {
             $error = "Incorrect details";
@@ -110,10 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li>
-                    <a href="./SchduleTiming.HTML">Schedule Timing</a>
-                  </li>
-                  <li><a href="./PatientList.HTML">Patient List</a></li>
+                <li><a href="./PatientRequet.HTML">Patient Request</a></li>
 
                   <li>
                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -141,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   <li>
                     <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                   </li>
-                  <li><a href="#">Your Situation</a></li>
+                  <li><a href="../Html/yoursituation.html">Your Situation</a></li>
                 </ul>
               </div>
             </li>

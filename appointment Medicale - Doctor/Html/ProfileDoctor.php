@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +17,40 @@
       type="image/x-icon" />
     <link rel="stylesheet" href="../Css/ProfileDoctor.CSS" />
   </head>
+  <?php
+          session_start();
+// Connexion à la base de données
+include("../../appointmentMedicale/Html/connect.php");
+// Requête SQL pour récupérer les rendez-vous du médecin connecté
+$doctor_id =  $_SESSION['medcin_id'] ;
+echo 'id= '.$doctor_id;// ID du médecin connecté, vous devez le récupérer depuis votre session PHP ou votre formulaire de connexion
+// Requête SQL pour récupérer le nom du médecin
+$query = "SELECT name,email,speciality,location,workingdays,price,tmp_name FROM doctor WHERE 	id_medcin = $doctor_id";
+$result_doctor_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_name);
+$doctor_name = $doctor_row['name'];
+$result_doctor_email = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_email);
+$doctor_name = $doctor_row['email'];
+$result_doctor_speciality = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_speciality);
+$doctor_name = $doctor_row['speciality'];
+$result_doctor_location = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_location);
+$doctor_name = $doctor_row['location'];
+$result_doctor_workingdays = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_workingdays);
+$doctor_name = $doctor_row['workingdays'];
+$result_doctor_price = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_price);
+$doctor_name = $doctor_row['price'];
+$result_doctor_tmp_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_tmp_name);
+$doctor_name = $doctor_row['tmp_name'];
+
+         
+$result = mysqli_query($con, $query);
+?>
   <body>
     <header>
       <div class="Logo">
@@ -60,8 +95,7 @@
               <a href="#">You <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li><a href="./SchduleTiming.HTML">Schedule Timing</a></li>
-                  <li><a href="./PatientList.HTML">Patient List</a></li>
+                <li><a href="./PatientRequet.php">Patient Request</a></li>
 
                   <li>
                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -140,21 +174,33 @@
           <div class="option-Profile">
             <ul>
               <li>
-                <img src="../../img/doctors profile/doctor1/doctors1.jpg" alt="" />
+              <!--  <img src="../../img/doctors profile/doctor1/doctors1.jpg" alt="" />-->
+              <?php
+            // Vérifie si le champ "tmp_name" existe dans $doctor_row
+            if (isset($doctor_row['tmp_name']) && !empty($doctor_row['tmp_name'])) {
+                // Utilisez la valeur de tmp_name comme source pour l'image
+                $tmp_name = $doctor_row['tmp_name'];
+            } else {
+                // Si tmp_name n'est pas défini ou est vide, utilisez l'image par défaut
+                $tmp_name = "../../img/img_doctor.jpg";
+            }
+            ?>
+            <!-- Affichage de l'image -->
+            
+                <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
               </li>
               <li>
-                <h3>Dr. Darren Elder</h3>
-                <p>BDS, MDS - Oral & Maxillofacial Surgery</p>
+              <h3>Dr.<?php echo $doctor_row['name']; ?></h3>
               </li>
               <li>
                 <a href="#"><i class="fa-solid fa-user-tie"></i> Profile</a>
               </li>
               <li>
-                <a href="./EditInformationDoc.HTml"
+                <a href="./EditInformationDoc.php"
                   ><i class="fas fa-user-cog"></i>Profile Setting</a
                 >
               </li>
-              <li>
+             <!-- <li>
                 <a href="./TimeEdit.HTML"
                   ><i class="fas fa-clock"></i> Timings Setting</a
                 >
@@ -163,20 +209,20 @@
                 <a href="./SchduleTiming.HTML"
                   ><i class="fas fa-clock"></i> Schedule Timing</a
                 >
-              </li>
+              </li>-->
               <li>
-                <a href="./PatientRequet.HTML"
+                <a href="./PatientRequet.php"
                   ><i class="fas fa-calendar-check"></i> Appointment</a
                 >
               </li>
-              <li>
+             <!-- <li>
                 <a href="./PatientList.HTML"
                   ><i class="fas fa-user-injured"></i> My Patient</a
                 >
-              </li>
+              </li>-->
 
               <li>
-                <a href="./ChangePassword.HTML"> Change Password</a>
+                <a href="./ChangePassword.php"> Change Password</a>
               </li>
               <li>
                 <a href="#" id="Quitter"
@@ -188,16 +234,31 @@
           <div class="Content-option">
             <div class="Card-CContainer">
               <div class="header-CCard">
-                <img
+               <!-- <img
                   src="../../img/MAPGRID/doctor1/card-doctor-1.jpg"
                   alt="Doctor"
-                  class="DoCtor-img" />
+                  class="DoCtor-img" />-->
+                  
+                   <?php
+            // Vérifie si le champ "tmp_name" existe dans $doctor_row
+            if (isset($doctor_row['tmp_name']) && !empty($doctor_row['tmp_name'])) {
+                // Utilisez la valeur de tmp_name comme source pour l'image
+                $tmp_name = $doctor_row['tmp_name'];
+            } else {
+                // Si tmp_name n'est pas défini ou est vide, utilisez l'image par défaut
+                $tmp_name = "../../img/img_doctor.jpg";
+            }
+            ?>
+            <!-- Affichage de l'image -->
+            
+                <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+           
                 <br />
               </div>
               <div class="information-Doctor">
-                <h3>Dr Yazid MAHIDDINE</h3>
-                <div>BDS, MDS - Oral & Maxillofacial Surgery</div>
-                <p><i class="fa-solid fa-location-dot"></i> BBA 1008,ALG</p>
+              <h3>Dr.<?php echo $doctor_row['name']; ?></h3>
+                <div><?php echo $doctor_row['speciality']; ?></div>
+                <p><i class="fa-solid fa-location-dot"></i> <?php echo $doctor_row['location']; ?></p>
                 <div>
                   <i class="fas fa-star" style="color: rgb(255, 192, 1)"></i>
                   <i class="fas fa-star" style="color: rgb(255, 192, 1)"></i>
@@ -210,15 +271,15 @@
                   <div class="Specialité-génerale">
                     <img
                       src="../../Icons/cardiology_12024596.png"
-                      class="Specialtiéé" />Cardiology
+                      class="Specialtiéé" /><?php echo $doctor_row['speciality']; ?>
                   </div>
                 </div>
               </div>
               <div class="information-Doctor">
-                <div><i class="far fa-money-bill-alt"></i> 300$ - 1000$</div>
+                <div><i class="far fa-money-bill-alt"></i><?php echo $doctor_row['price']; ?></div>
                 <div>
                   <button>
-                    <a href="#">Book Appointment</a>
+                    <a href="PatientRequet.php"> Appointment</a>
                   </button>
                 </div>
                 <div class="collectimg">
@@ -289,5 +350,6 @@
     <script src="../jS/boitdeConifrmation.Js"></script>
     <script src="../jS/Uplode.Js"></script>
     <script src="../jS/scrole.Js"></script>
+    
   </body>
 </html>

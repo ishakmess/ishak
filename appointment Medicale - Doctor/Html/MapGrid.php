@@ -17,6 +17,29 @@
     <link rel="stylesheet" href="../Css/MapGrid.CSS" />
     <link rel="stylesheet" href="../Css/scrole.CSS" />
   </head>
+  <?php
+  session_start();
+// Connexion à la base de données
+include("../../appointmentMedicale/Html/connect.php");
+// Requête SQL pour récupérer les rendez-vous du médecin connecté
+$doctor_id =  $_SESSION['medcin_id'] ;
+echo 'id= '.$doctor_id;// ID du médecin connecté, vous devez le récupérer depuis votre session PHP ou votre formulaire de connexion
+// Requête SQL pour récupérer le nom du médecin
+$query = "SELECT name,email,speciality,location,workingdays,price,tmp_name FROM doctor WHERE 	id_medcin = $doctor_id";
+$result_doctor_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_name);
+$doctor_name = $doctor_row['name'];
+$doctor_name = $doctor_row['speciality'];
+$result_doctor_location = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_location);
+
+$result_doctor_tmp_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_tmp_name);
+$doctor_name = $doctor_row['tmp_name'];
+
+ 
+$result = mysqli_query($con, $query);
+?>
   <body>
     <header>
       <div class="Logo">
@@ -61,8 +84,7 @@
               <a href="#">You <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li><a href="./SchduleTiming.HTML">Schedule Timing</a></li>
-                  <li><a href="./PatientList.HTML">Patient List</a></li>
+                  <li><a href="./PatientRequet.php">Patient Request</a></li>
 
                   <li>
                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -142,6 +164,49 @@
         <div class="Card-Father">
           <h1>Ours Doctors</h1>
           <p>Don't Forget To Check Specialty of Doctor you need</p>
+          <?php
+      
+      include("../../appointmentMedicale/Html/connect.php");
+
+      // Requête pour récupérer les médecins
+      include "../../appointmentMedicale/Html/connect.php";
+      $sql = "SELECT * FROM doctor";
+      $result = $con->query($sql);
+
+      if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $tmp_name = !empty($row['tmp_name']) ? $row['tmp_name'] : "../../img/img_doctor.jpg";
+          ?>
+          <div class="Card-CContainer">
+            <div class="header-CCard">
+              <img src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+              <br />
+              <div class="Specialité-Doc">
+                <div class="Specialité-génerale"><?php echo htmlspecialchars($row['speciality'], ENT_QUOTES, 'UTF-8'); ?></div>
+                <div class="Specialité-Details">Doctor</div>
+              </div>
+            </div>
+            <div class="information-Doctor">
+              <h3><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8'); ?></h3>
+              <h4>Working days</h4> <?php echo htmlspecialchars($row['workingdays'], ENT_QUOTES, 'UTF-8'); ?>
+              <h4>Price of consultation</h4> <?php echo htmlspecialchars($row['price'], ENT_QUOTES, 'UTF-8'); ?>
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <?php echo htmlspecialchars($row['location'], ENT_QUOTES, 'UTF-8'); ?>
+              </div>
+              <button>
+                <a href="#">Book Appointment</a>
+              </button>
+            </div>
+          </div>
+          <?php
+        }
+      } else {
+        echo "Aucun résultat trouvé";
+      }
+
+      $con->close();
+      ?>
           <div class="Card-CContainer">
             <div class="header-CCard">
               <img

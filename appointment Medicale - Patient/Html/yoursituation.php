@@ -14,9 +14,10 @@
       rel="shortcut icon"
       href="../Icons/logo-small.png"
       type="image/x-icon" />
-    <link rel="stylesheet" href="../Css/BookingSuccessfully.CSS" />
-    <link rel="stylesheet" href="../Css/scrole.CSS" />
+    <link rel="stylesheet" href="../Css/yoursituation.css" />
+    <link rel="stylesheet" href="scrole.CSS" />
   </head>
+ 
   <body>
     <header>
       <div class="Logo">
@@ -47,7 +48,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="../Html/Fertility-Home.Html">
+                    <a href="/appointment Medicale/Html/Fertility-Home.Html">
                       <img src="../../img/home/fitntly.jpg" alt="fitntly" />
                       <div>Fertility</div>
                     </a>
@@ -61,7 +62,8 @@
               <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li><a href="./PatientRequet.HTML">Patient Request</a></li>
+                  <li><a href="./SchduleTiming.HTML">Schedule Timing</a></li>
+                  <li><a href="./PatientList.HTML">Patient List</a></li>
 
                   <li>
                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -82,7 +84,7 @@
                         <a href="./MapGrid.HTML" class="option">Map Grid</a>
                       </li>
                       <li>
-                        <a href="./MapList.php" class="option">Map List</a>
+                        <a href="./MapList.HTML" class="option">Map List</a>
                       </li>
                     </ul>
                   </li>
@@ -130,7 +132,7 @@
       </div>
       <div class="Login">
         <i class="fa-solid fa-lock"></i>
-        <a href="../Html/Login.php"> Singe </a>
+        <a href="../../appointmentMedicale/Html/Login.php"> Singe </a>
       </div>
     </header>
     <!-- ! main Start **************************************************************** -->
@@ -150,13 +152,8 @@
       <!-- ! Section Booking eta Start  -->
 
       <section class="situation">
-        <div class="parent">
-          <div><i class="fas fa-check"></i></div>
-          <h3>Appointment booked Successfully!</h3>
-          <p>Appointment booked with Dr. Darren Elder</p>
-          <div>
-            <button><a href="./generale-Home.html">Return Home</a></button>
-          </div>
+        <div class="parent" id="parent">
+         
         </div>
       </section>
       <!-- ! Section Booking eta End  -->
@@ -211,5 +208,168 @@
         </div>
       </div>
     </footer>
+  
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    let parent = document.getElementById("parent");
+/* ************************************************************ */
+let doctorName = "";
+    fetch("requete.php")
+        .then(response => response.json())
+        .then(appointments => {
+            if (appointments.length > 0) {
+                appointments.forEach(appointment => {
+                    if (appointment.etatrequete === 'accepté') {
+                        BookingSuccessfully(appointment.doctor_name);
+                    } else if (appointment.etatrequete === 'refuser') {
+                        BookingFaild(appointment.doctor_name);
+                    } else {
+                        wait(appointment.doctor_name);
+                    }
+                });
+            } else {
+                Nothing();
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching appointments:', error);
+            BookingFaild('Unknown Doctor');  // Handle the error case appropriately
+        });
+
+    function BookingSuccessfully(doctorName) {
+        // Create elements and append to parent (similar to the original script)
+        
+  // Create icon element
+  let icon = document.createElement("i");
+  icon.className = "fas fa-check";
+  icon.style.cssText = "font-size: 40px; color: #0bda51; margin-right: 10px;";
+
+  // Create message span
+  let messageText = document.createElement("span");
+  messageText.style.cssText =
+    "font-size: 18px; color: #333; margin-right: 5px;";
+  messageText.textContent = "Appointment booked Successfully! With";
+
+  // Create doctor name span
+  let doctorNameText = document.createElement("span");
+  doctorNameText.style.cssText =
+    "font-size: 18px; color: #0bda51; font-weight: bold; margin-left: 5px;";
+  doctorNameText.textContent = doctorName;
+
+  // Create container div
+  let containerDiv = document.createElement("div");
+  containerDiv.style.cssText =
+    "display: flex; justify-content: center; align-items: center;border: 2px solid  #0bda51;padding:10px;width:60%; border-radius: 15px;";
+
+  // Append elements to container div
+  containerDiv.appendChild(icon);
+  containerDiv.appendChild(messageText);
+  containerDiv.appendChild(doctorNameText);
+
+  // Append container to parent
+  parent.appendChild(containerDiv);
+
+
+    }
+
+    function Nothing() {
+        // Create elements and append to parent (similar to the original script)
+        // Create icon element
+  let icon = document.createElement("i");
+  icon.className = "fa-regular fa-face-smile";
+  icon.style.cssText = "font-size: 40px; color: #007fff; margin-right: 10px;";
+
+  // Create message span
+  let messageText = document.createElement("span");
+  messageText.style.cssText =
+    "font-size: 18px; color: #333; margin-right: 5px;";
+  messageText.textContent = "you don't make any appointment . ";
+
+  // Create doctor name span
+  let doctorNameText = document.createElement("span");
+  doctorNameText.style.cssText =
+    "font-size: 18px; color: #0bda51; font-weight: bold; margin-left: 5px;";
+  doctorNameText.textContent = doctorName;
+
+  // Create container div
+  let containerDiv = document.createElement("div");
+  containerDiv.style.cssText =
+    "display: flex; justify-content: center; align-items: center; border: 2px solid #007fff;padding:10px;width:50%; border-radius: 15px;";
+
+  // Append elements to container div
+  containerDiv.appendChild(icon);
+  containerDiv.appendChild(messageText);
+
+  // Append container to parent
+  parent.appendChild(containerDiv);
+    }
+
+    function BookingFaild(doctorName) {
+        // Create elements and append to parent (similar to the original script)
+         // Create icon element
+  let icon = document.createElement("i");
+  icon.className = "fa-solid fa-x";
+  icon.style.cssText = "font-size: 40px; color: #FF0800; margin-right: 10px;";
+
+  // Create message span
+  let messageText = document.createElement("span");
+  messageText.style.cssText =
+    "font-size: 18px; color: #333; margin-right: 5px;";
+  messageText.textContent = "Appointment failed  With";
+
+  // Create doctor name span
+  let doctorNameText = document.createElement("span");
+  doctorNameText.style.cssText =
+    "font-size: 18px; color: #FF0800; font-weight: bold; margin-left: 5px;";
+  doctorNameText.textContent = doctorName;
+
+  // Create container div
+  let containerDiv = document.createElement("div");
+  containerDiv.style.cssText =
+    "display: flex; justify-content: center; align-items: center; border: 2px solid #FF0800;padding:10px;width:50%; border-radius: 15px; ";
+
+  // Append elements to container div
+  containerDiv.appendChild(icon);
+  containerDiv.appendChild(messageText);
+  containerDiv.appendChild(doctorNameText);
+
+  // Append container to parent
+  parent.appendChild(containerDiv);
+    }
+
+    function wait(doctorName) {
+        // Create elements and append to parent (similar to the original script)
+        // Create icon element
+  let icon = document.createElement("i");
+  icon.className = "fa-regular fa-clock";
+  icon.style.cssText = "font-size: 40px; color: #848482; margin-right: 10px;";
+
+  // Create message span
+  let messageText = document.createElement("span");
+  messageText.style.cssText =
+    "font-size: 18px; color: #333; margin-right: 5px;";
+  messageText.textContent = "just wait the answer of Doctor ";
+
+  // Create doctor name span
+  let doctorNameText = document.createElement("span");
+  doctorNameText.style.cssText =
+    "font-size: 18px; color: #848482 ; font-weight: bold; margin-left: 5px;";
+  doctorNameText.textContent = doctorName;
+
+  // Create container div
+  let containerDiv = document.createElement("div");
+  containerDiv.style.cssText =
+    "display: flex; justify-content: center; align-items: center;  border: 2px solid #848482;padding:10px;width:50%; border-radius: 15px; ";
+
+  // Append elements to container div
+  containerDiv.appendChild(icon);
+  containerDiv.appendChild(messageText);
+  containerDiv.appendChild(doctorNameText);
+
+  // Append container to parent
+  parent.appendChild(containerDiv);
+    }
+});
+</script>
   </body>
 </html>

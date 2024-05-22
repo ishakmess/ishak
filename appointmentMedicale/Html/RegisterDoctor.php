@@ -214,10 +214,7 @@ $mail->Password = '524f6a8bfa54b0';
             <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
             <div class="Doctors-option">
               <ul>
-                <li>
-                  <a href="./SchduleTiming.HTML">Schedule Timing</a>
-                </li>
-                <li><a href="./PatientList.HTML">Patient List</a></li>
+              <li><a href="./PatientRequet.HTML">Patient Request</a></li>
 
                 <li>
                   <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -244,7 +241,7 @@ $mail->Password = '524f6a8bfa54b0';
                 <li>
                   <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                 </li>
-                <li><a href="#">Your Situation</a></li>
+                <li><a href="../Html/yoursituation.html">Your Situation</a></li>
               </ul>
             </div>
           </li>

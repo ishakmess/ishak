@@ -153,10 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
             <div class="Doctors-option">
               <ul>
-                <li>
-                  <a href="./SchduleTiming.HTML">Schedule Timing</a>
-                </li>
-                <li><a href="./PatientList.HTML">Patient List</a></li>
+              <li><a href="./PatientRequet.HTML">Patient Request</a></li>
 
                 <li>
                   <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -183,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li>
                   <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                 </li>
-                <li><a href="#">Your Situation</a></li>
+                <li><a href="../Html/yoursituation.html">Your Situation</a></li>
               </ul>
             </div>
           </li>

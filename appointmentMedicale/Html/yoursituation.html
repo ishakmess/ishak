@@ -14,8 +14,8 @@
       rel="shortcut icon"
       href="../Icons/logo-small.png"
       type="image/x-icon" />
-    <link rel="stylesheet" href="../Css/Bookingfail.CSS" />
-    <link rel="stylesheet" href="../Css/scrole.CSS" />
+    <link rel="stylesheet" href="../Css/yoursituation.css" />
+    <link rel="stylesheet" href="scrole.CSS" />
   </head>
   <body>
     <header>
@@ -35,20 +35,20 @@
                   <li>
                     <a href="../Html/Cardeiologie-Home.HTML"
                       ><img
-                        src="../../img/home/Cardiology-Home.jpg"
+                        src="/img/home/Cardiology-Home.jpg"
                         alt="img-cardiology" />
                       <div>Cardiology Home</div>
                     </a>
                   </li>
                   <li>
                     <a href="../Html/Eye-Care-Home.HTML">
-                      <img src="../../img/home/Eye care.jpg" alt="Eye-Care" />
+                      <img src="/img/home/Eye care.jpg" alt="Eye-Care" />
                       <div>Eye Care Home</div>
                     </a>
                   </li>
                   <li>
-                    <a href="../Html/Fertility-Home.Html">
-                      <img src="../../img/home/fitntly.jpg" alt="fitntly" />
+                    <a href="/appointment Medicale/Html/Fertility-Home.Html">
+                      <img src="/img/home/fitntly.jpg" alt="fitntly" />
                       <div>Fertility</div>
                     </a>
                   </li>
@@ -61,12 +61,13 @@
               <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
+                  <li><a href="./SchduleTiming.HTML">Schedule Timing</a></li>
+                  <li><a href="./PatientList.HTML">Patient List</a></li>
+
                   <li>
-                    <a href="./MapGrid.HTML" class="option">Map Grid</a>
+                    <a href="./EditInformationDoc.HTml">Profile Setting</a>
                   </li>
-                  <li>
-                    <a href="./MapList.php" class="option">Map List</a>
-                  </li>
+                  <li><a href="./RegisterDoctor.Html">Doctors Register</a></li>
                 </ul>
               </div>
             </li>
@@ -75,12 +76,21 @@
               <div class="Patient-option">
                 <ul>
                   <li>
-                    <a href="../Html/PatientProfile.php">Profile Setting</a>
+                    <a href="#" class="Doct"> Doctors </a
+                    ><i class="fa-solid fa-chevron-right"></i>
+                    <ul class="DoctorsOption">
+                      <li>
+                        <a href="./MapGrid.HTML" class="option">Map Grid</a>
+                      </li>
+                      <li>
+                        <a href="./MapList.HTML" class="option">Map List</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                   </li>
                   <li><a href="#">Your Situation</a></li>
-                  <li>
-                    <a href="../Html/changepasswordP.php">Change Password</a>
-                  </li>
                 </ul>
               </div>
             </li>
@@ -108,17 +118,21 @@
               <div class="Blog-option">
                 <ul>
                   <li><a href="../Html/Blog-list.HTML">Blog List</a></li>
-                  <li><a href="../Html/BlogDetails.html">Blog Details</a></li>
+                  <li><a href="../Html/BlogDetails.HTML">Blog Details</a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </nav>
       </div>
-
-      <img src="../../Icons/patient1.png" class="iconPatient" />
-      <img src="../../Icons/patient2.png" class="iconPatient" />
-      <img src="../../Icons/patient3.png" class="iconPatient" />
+      <div class="Login">
+        <i class="fa-regular fa-user"></i>
+        <a href="../Html/Register.Html"> Register</a>
+      </div>
+      <div class="Login">
+        <i class="fa-solid fa-lock"></i>
+        <a href="../Html/Login.HtML"> Singe </a>
+      </div>
     </header>
     <!-- ! main Start **************************************************************** -->
     <main>
@@ -137,13 +151,13 @@
       <!-- ! Section Booking eta Start  -->
 
       <section class="situation">
-        <div class="parent">
-          <div><i class="fa-solid fa-x"></i></div>
-          <h3>Appointment booked fail!</h3>
-          <p>Dr. Darren Elder Are So busy</p>
+        <div class="parent" id="parent">
+          <!-- <div><i class="fas fa-check"></i></div>
+          <h3>Appointment booked Successfully!</h3>
+          <p>Appointment booked with Dr. Darren Elder</p>
           <div>
             <button><a href="./generale-Home.html">Return Home</a></button>
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- ! Section Booking eta End  -->
@@ -198,6 +212,6 @@
         </div>
       </div>
     </footer>
-    <script src="../jS/scrole.Js"></script>
+    <script src="../jS/Patientsituation.js"></script>
   </body>
 </html>

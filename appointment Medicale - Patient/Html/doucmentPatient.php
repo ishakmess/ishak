@@ -129,11 +129,11 @@ session_start(); // Démarrez la session si ce n'est pas déjà fait
               <div class="Patient-option">
                 <ul>
                   <li>
-                    <a href="../Html/PatientProfile.HTML">Profile Setting</a>
+                    <a href="../Html/PatientProfile.php">Profile Setting</a>
                   </li>
-                  <li><a href="#">Your Situation</a></li>
+                  <li><a href="../Html/yoursituation.php">Your Situation</a></li>
                   <li>
-                    <a href="../Html/changepasswordP.html">Change Password</a>
+                    <a href="../Html/changepasswordP.php">Change Password</a>
                   </li>
                 </ul>
               </div>

@@ -28,7 +28,7 @@ Confirme.onclick = function () {
     "   margin: 20px;background-color:  rgba(15, 183, 107, 0.12) !important; cursor:pointer; ;color:#007fff ;border:#007fff 1px solid;padding:5px 10px";
   buttonbox.appendChild(okbtn);
   okbtn.onclick = function okClick() {
-    let genralepageback = "../Html/Register.Html";
+    let genralepageback = "../Html/Register.php";
     window.location.href = genralepageback;
     confirmBox.remove();
   };
@@ -75,7 +75,7 @@ Doc1.onclick = function () {
     "   margin: 20px;background-color:  rgba(15, 183, 107, 0.12) !important; cursor:pointer; ;color:#007fff ;border:#007fff 1px solid;padding:5px 10px";
   buttonbox.appendChild(okbtn);
   okbtn.onclick = function okClick() {
-    let genralepageback = "../Html/Register.Html";
+    let genralepageback = "../Html/Register.php";
     window.location.href = genralepageback;
     confirmBox.remove();
   };

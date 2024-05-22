@@ -61,10 +61,7 @@
               <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li>
-                    <a href="./SchduleTiming.HTML">Schedule Timing</a>
-                  </li>
-                  <li><a href="./PatientList.HTML">Patient List</a></li>
+                  <li><a href="./PatientRequet.HTML">Patient Request</a></li>
                   <li>
                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
                   </li>
@@ -91,7 +88,7 @@
                   <li>
                     <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                   </li>
-                  <li><a href="#">Your Situation</a></li>
+                  <li><a href="../Html/yoursituation.html">Your Situation</a></li>
                 </ul>
               </div>
             </li>
@@ -164,7 +161,7 @@
                 <p>BDS, MDS - Oral & Maxillofacial Surgery</p>
               </li>
               <li>
-                <a href="##" id="Profilee"
+                <a href="./ProfileDoctor.HTML" id="Profilee"
                   ><i class="fa-solid fa-user-tie"></i>Profile</a
                 >
               </li>
@@ -173,26 +170,13 @@
                   ><i class="fas fa-user-cog"></i>Profile Setting</a
                 >
               </li>
-              <li>
-                <a href="./TimeEdit.HTML" id="TimeSettingG"
-                  ><i class="fas fa-clock"></i> Timings Setting</a
-                >
-              </li>
-              <li>
-                <a href="./SchduleTiming.HTML" id="ScheduleE"
-                  ><i class="fas fa-clock"></i> Schedule Timing</a
-                >
-              </li>
+             
               <li>
                 <a href="./PatientRequet.HTML" id="A3ppointmentt"
                   ><i class="fas fa-calendar-check"></i> Appointment</a
                 >
               </li>
-              <li>
-                <a href="./PatientList.HTML" id="Patient"
-                  ><i class="fas fa-user-injured"></i>My Patient</a
-                >
-              </li>
+              
               <li>
                 <a href="./ChangePassword.HTML" id="changepassword"
                   ><i class="fas fa-user-injured"></i>Change Password</a
@@ -251,11 +235,18 @@
                       value="1008.BAA,ALG" />
                   </div>
                   <div>
+                    <label for="">working days</label>
+                    <input
+                      placeholder="Enter the working days"
+                      required
+                      value="sunday to thursday" />
+                  </div>
+                  <div>
                     <label for="">Price of the appointment </label>
                     <input
                       placeholder="Enter the price of your appointment"
                       required
-                      value="" />
+                      value="2000da" />
                   </div>
                   <button id="Save">Save change ?</button>
                 </form>

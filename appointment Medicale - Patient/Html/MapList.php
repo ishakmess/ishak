@@ -17,6 +17,29 @@
     <link rel="stylesheet" href="../Css/MapList.CSS" />
     <link rel="stylesheet" href="../Css/scrole.CSS" />
   </head>
+  <?php
+          session_start();
+// Connexion à la base de données
+include("../../appointmentMedicale/Html/connect.php");
+// Requête SQL pour récupérer les rendez-vous du médecin connecté
+$doctor_id =  $_SESSION['medcin_id'] ;
+echo 'id= '.$doctor_id;// ID du médecin connecté, vous devez le récupérer depuis votre session PHP ou votre formulaire de connexion
+// Requête SQL pour récupérer le nom du médecin
+$query = "SELECT name,email,speciality,location,workingdays,price,tmp_name FROM doctor WHERE 	id_medcin = $doctor_id";
+$result_doctor_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_name);
+$doctor_name = $doctor_row['name'];
+$doctor_name = $doctor_row['speciality'];
+$result_doctor_location = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_location);
+
+$result_doctor_tmp_name = mysqli_query($con,$query);
+$doctor_row = mysqli_fetch_assoc($result_doctor_tmp_name);
+$doctor_name = $doctor_row['tmp_name'];
+
+         
+$result = mysqli_query($con, $query);
+?>
   <body>
     <header>
       <div class="Logo">
@@ -79,11 +102,11 @@
               <div class="Patient-option">
                 <ul>
                   <li>
-                    <a href="../Html/PatientProfile.HTML">Profile Setting</a>
+                    <a href="../Html/PatientProfile.php">Profile Setting</a>
                   </li>
-                  <li><a href="./doucmentPatient.Html">Your Situation</a></li>
+                  <li><a href="../Html/yoursituation.php">Your Situation</a></li>
                   <li>
-                    <a href="../Html/changepasswordP.html">Change Password</a>
+                    <a href="../Html/changepasswordP.php">Change Password</a>
                   </li>
                 </ul>
               </div>
@@ -154,26 +177,17 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
   // Afficher les données dans le code HTML avec une boucle foreach
   while ($row = $result->fetch_assoc()) {
+     // Vérifier si la spécialité est "General Doctor"
+     if ($row['speciality'] == 'Generale Doctor') {
+      $tmp_name = !empty($row['tmp_name']) ? $row['tmp_name'] : "../../img/img_doctor.jpg";
     ?>
     <div class="Card-CContainer">
       <div class="header-CCard">
-      <?php
-        // Vérifier si l'URL de la photo est vide ou non
-        if (!empty($row['photo'])) {
-          // Si une URL est disponible, afficher la photo du médecin
-          ?>
-          <img src="<?php echo $row['photo']; ?>" alt="Doctor" class="DoCtor-img" />
-          <?php
-        } else {
-          // Si l'URL est vide, afficher l'image statique
-          ?>
-          <img src="../../img/img_doctor.jpg" alt="Doctor" class="DoCtor-img" />
-          <?php
-        }
-        ?>
+            <!-- Affichage de l'image -->
+            
+            <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
         <br />
-       <!-- <img src="<?php echo $row['photo']; ?>" alt="Doctor" class="DoCtor-img" />
-        <br />-->
+       
         <div class="Specialité-Doc">
           <div class="Specialité-génerale"><?php echo $row['speciality']; ?></div>
           <div class="Specialité-Details">Doctor</div>
@@ -200,6 +214,7 @@ if ($result->num_rows > 0) {
     </div>
     <?php
   }
+}
 } else {
   echo "Aucun résultat trouvé";
 }
@@ -314,6 +329,64 @@ $con->close();
       <section class="Card-Doctor">
         <h1>Cardiology Doctor</h1>
         <div class="Card-Father">
+        <?php
+          // Requête pour récupérer les médecins
+          include "../../appointmentMedicale/Html/connect.php";
+          $sql = "SELECT * FROM doctor";
+          $result = $con->query($sql);
+          
+          // Vérifier s'il y a des résultats
+          if ($result->num_rows > 0) {
+            // Afficher les données dans le code HTML avec une boucle foreach
+            while ($row = $result->fetch_assoc()) {
+              // Vérifier si la spécialité est "General Doctor"
+            if ($row['speciality'] == 'cardiology') {
+              $tmp_name = !empty($row['tmp_name']) ? $row['tmp_name'] : "../../img/img_doctor.jpg";
+            
+              ?>
+              
+              <div class="Card-CContainer">
+                <div class="header-CCard">
+            
+            <!-- Affichage de l'image -->
+            
+            <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+                  <br />
+               
+                  
+                  <div class="Specialité-Doc">
+                    <div class="Specialité-génerale"><?php echo $row['speciality']; ?></div>
+                    <div class="Specialité-Details">Doctor</div>
+                  </div>
+                </div>
+          
+           
+          
+                <div>
+                  <h3><?php echo $row['name'] ; ?></h3><br>
+                 <h4>working days</h4> <?php echo $row['workingdays'] ; ?>
+                 <h4>Price of consultation</h4> <?php echo $row['price'] ; ?>
+                  <div>
+                  
+                    <div><i class="fa-solid fa-location-dot"></i></div>
+                    <div><?php echo $row['location']; ?></div>
+                  </div>
+                  <button>
+    <a href="./doucmentPatient.php?id=<?php echo $row['id_medcin']; ?>">Consult</a>
+</button>
+          
+                </div>
+              </div>
+              <?php
+              } // fin de la condition if pour vérifier la spécialité
+            }
+          } else {
+            echo "Aucun résultat trouvé";
+          }
+          
+          // Fermer la connexion
+          $con->close();
+          ?>
           <div class="Card-CContainer">
             <div class="header-CCard">
               <img
@@ -421,6 +494,64 @@ $con->close();
       <section class="Card-Doctor">
         <h1>Ophthalmologist Doctor</h1>
         <div class="Card-Father">
+        <?php
+          // Requête pour récupérer les médecins
+          include "../../appointmentMedicale/Html/connect.php";
+          $sql = "SELECT * FROM doctor";
+          $result = $con->query($sql);
+          
+          // Vérifier s'il y a des résultats
+          if ($result->num_rows > 0) {
+            // Afficher les données dans le code HTML avec une boucle foreach
+            while ($row = $result->fetch_assoc()) {
+              // Vérifier si la spécialité est "General Doctor"
+            if ($row['speciality'] == 'Eye care') {
+              $tmp_name = !empty($row['tmp_name']) ? $row['tmp_name'] : "../../img/img_doctor.jpg";
+            
+              ?>
+              
+              <div class="Card-CContainer">
+                <div class="header-CCard">
+            
+            <!-- Affichage de l'image -->
+            
+            <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+                  <br />
+               
+                  
+                  <div class="Specialité-Doc">
+                    <div class="Specialité-génerale"><?php echo $row['speciality']; ?></div>
+                    <div class="Specialité-Details">Doctor</div>
+                  </div>
+                </div>
+          
+           
+          
+                <div>
+                  <h3><?php echo $row['name'] ; ?></h3><br>
+                 <h4>working days</h4> <?php echo $row['workingdays'] ; ?>
+                 <h4>Price of consultation</h4> <?php echo $row['price'] ; ?>
+                  <div>
+                  
+                    <div><i class="fa-solid fa-location-dot"></i></div>
+                    <div><?php echo $row['location']; ?></div>
+                  </div>
+                  <button>
+    <a href="./doucmentPatient.php?id=<?php echo $row['id_medcin']; ?>">Consult</a>
+</button>
+          
+                </div>
+              </div>
+              <?php
+              } // fin de la condition if pour vérifier la spécialité
+            }
+          } else {
+            echo "Aucun résultat trouvé";
+          }
+          
+          // Fermer la connexion
+          $con->close();
+          ?>
           <div class="Card-CContainer">
             <div class="header-CCard">
               <img
@@ -531,6 +662,64 @@ $con->close();
       <section class="Card-Doctor">
         <h1>Fertility Doctor</h1>
         <div class="Card-Father">
+        <?php
+          // Requête pour récupérer les médecins
+          include "../../appointmentMedicale/Html/connect.php";
+          $sql = "SELECT * FROM doctor";
+          $result = $con->query($sql);
+          
+          // Vérifier s'il y a des résultats
+          if ($result->num_rows > 0) {
+            // Afficher les données dans le code HTML avec une boucle foreach
+            while ($row = $result->fetch_assoc()) {
+              // Vérifier si la spécialité est "General Doctor"
+            if ($row['speciality'] == 'fritility') {
+              $tmp_name = !empty($row['tmp_name']) ? $row['tmp_name'] : "../../img/img_doctor.jpg";
+            
+              ?>
+              
+              <div class="Card-CContainer">
+                <div class="header-CCard">
+            
+            <!-- Affichage de l'image -->
+            
+            <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+                  <br />
+               
+                  
+                  <div class="Specialité-Doc">
+                    <div class="Specialité-génerale"><?php echo $row['speciality']; ?></div>
+                    <div class="Specialité-Details">Doctor</div>
+                  </div>
+                </div>
+          
+           
+          
+                <div>
+                  <h3><?php echo $row['name'] ; ?></h3><br>
+                 <h4>working days</h4> <?php echo $row['workingdays'] ; ?>
+                 <h4>Price of consultation</h4> <?php echo $row['price'] ; ?>
+                  <div>
+                  
+                    <div><i class="fa-solid fa-location-dot"></i></div>
+                    <div><?php echo $row['location']; ?></div>
+                  </div>
+                  <button>
+    <a href="./doucmentPatient.php?id=<?php echo $row['id_medcin']; ?>">Consult</a>
+</button>
+          
+                </div>
+              </div>
+              <?php
+              } // fin de la condition if pour vérifier la spécialité
+            }
+          } else {
+            echo "Aucun résultat trouvé";
+          }
+          
+          // Fermer la connexion
+          $con->close();
+          ?>
           <div class="Card-CContainer">
             <div class="header-CCard">
               <img

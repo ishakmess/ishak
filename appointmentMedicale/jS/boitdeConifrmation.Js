@@ -26,7 +26,7 @@ Confirme.onclick = function () {
     "   margin: 20px;background-color:  rgba(15, 183, 107, 0.12) !important; cursor:pointer; ;color:#007fff ;border:#007fff 1px solid;padding:5px 10px";
   buttonbox.appendChild(okbtn);
   okbtn.onclick = function okClick() {
-    let genralepageback = "/appointment Medicale/Html/generale-Home.html";
+    let genralepageback = "../../appointmentMedicale/Html/generale-Home.html";
     window.location.href = genralepageback;
     confirmBox.remove();
   };

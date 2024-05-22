@@ -17,6 +17,69 @@
     <link rel="stylesheet" href="../Css/ChangepasswordP.CSS" />
     <link rel="stylesheet" href="../Css/scrole.CSS" />
   </head>
+  <?php
+          session_start();
+// Connexion à la base de données
+include ("../../appointmentMedicale/Html/connect.php");
+// Requête SQL pour récupérer les rendez-vous du médecin connecté
+// Récupérez l'ID du client depuis la session
+$client_id = $_SESSION['client_id'];
+echo 'id= '.$client_id;// ID du médecin connecté, vous devez le récupérer depuis votre session PHP ou votre formulaire de connexion
+// Requête SQL pour récupérer le nom du médecin
+$query = "SELECT firstname,lastname,email,tmp_name FROM patient WHERE 	id_patient  = $client_id";
+$result_patient_firstname = mysqli_query($con,$query);
+$patient_row = mysqli_fetch_assoc($result_patient_firstname);
+$patient_name = $patient_row['firstname'];
+$result_patient_lastname = mysqli_query($con,$query);
+$patient_row = mysqli_fetch_assoc($result_patient_lastname);
+$patient_name = $patient_row['lastname'];
+$result_patient_tmp_name = mysqli_query($con,$query);
+$patient_row = mysqli_fetch_assoc($result_patient_tmp_name);
+$patient_name = $patient_row['tmp_name'];
+$error = "";
+$email_error = "";
+$password_error = "";
+$success_message = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
+    $old_password = mysqli_real_escape_string($con, $_POST['old_password']);
+    $new_password = mysqli_real_escape_string($con, $_POST['new_password']);
+    $confirm_password = mysqli_real_escape_string($con, $_POST['confirm_password']);
+    $client_id = $_SESSION['client_id'];
+
+    // Vérification que les champs ne sont pas vides
+    if (empty($old_password) || empty($new_password) || empty($confirm_password)) {
+        $password_error = "All fields are required.";
+    } else {
+        // Récupérer le mot de passe actuel du médecin depuis la base de données
+        $query = "SELECT password FROM patient WHERE id_patient  = $client_id";
+        $result = mysqli_query($con, $query);
+        $row = mysqli_fetch_assoc($result);
+        $current_password_hashed = $row['password'];
+
+        // Vérifier que l'ancien mot de passe est correct
+        if (sha1($old_password) !== $current_password_hashed) {
+            $password_error = "The old password is incorrect.";
+        } elseif ($new_password !== $confirm_password) {
+            $password_error = "The new passwords do not match.";
+        } else {
+            // Hacher le nouveau mot de passe et le mettre à jour dans la base de données
+            $new_password_hashed = sha1($new_password);
+            $update_query = "UPDATE patient SET password = '$new_password_hashed' WHERE id_patient  = $client_id";
+
+            if (mysqli_query($con, $update_query)) {
+                $success_message = "Password updated successfully.";
+            } else {
+                $password_error = "An error occurred while updating the password.";
+            }
+        }
+    }
+}
+
+
+         
+$result = mysqli_query($con, $query);
+?>
   <body>
     <header>
       <div class="Logo">
@@ -75,11 +138,11 @@
               <div class="Patient-option">
                 <ul>
                   <li>
-                    <a href="../Html/PatientProfile.HTML">Profile Setting</a>
+                    <a href="../Html/PatientProfile.php">Profile Setting</a>
                   </li>
-                  <li><a href="#">Your Situation</a></li>
+                  <li><a href="../Html/yoursituation.php">Your Situation</a></li>
                   <li>
-                    <a href="../Html/changepasswordP.html">Change Password</a>
+                    <a href="../Html/changepasswordP.php">Change Password</a>
                   </li>
                 </ul>
               </div>
@@ -142,14 +205,25 @@
           <div class="option-Profile">
             <ul>
               <li>
-                <img src="../../img/doctors profile/doctor1/doctors1.jpg" alt="" />
+              <?php
+// Vérifie si le champ "tmp_name" existe dans $patient_row et n'est pas vide
+if (isset($patient_row['tmp_name']) && !empty($patient_row['tmp_name'])) {
+    // Utilisez la valeur de tmp_name comme source pour l'image
+    $tmp_name = $patient_row['tmp_name'];
+} else {
+    // Si tmp_name n'est pas défini ou est vide, utilisez l'image par défaut
+    $tmp_name = "../../img/patientstatique.png";
+}
+?>
+<!-- Affichage de l'image -->
+<img id="displayedImage" src="<?php echo $tmp_name; ?>" alt="Displayed Image" />
               </li>
               <li>
-                <h3>Aanwar Dis</h3>
+              <h3><?php echo $patient_row['firstname'] . ' ' . $patient_row['lastname']; ?></h3>
               </li>
 
               <li>
-                <a href="#"><i class="fas fa-user-cog"></i>Profile Setting</a>
+                <a href="../Html/PatientProfile.php"><i class="fas fa-user-cog"></i>Profile Setting</a>
               </li>
               <li>
                 <a href="./MyApponintment.HTML"
@@ -157,7 +231,7 @@
                 >
               </li>
               <li>
-                <a href="./changepasswordP.html"
+                <a href="./changepasswordP.php"
                   ><i class="fas fa-user-injured"></i>Change Password</a
                 >
               </li>
@@ -170,11 +244,12 @@
             <div class="Profile_Setting">
               <h4>Chang Password</h4>
               <div>
-                <form action="submit">
+              <form method="post" action="changepasswordP.php">
                   <div>
                     <label for="">Old Password</label>
                     <input
                       type="password"
+                      name="old_password" 
                       placeholder="Old Password"
                       required />
                   </div>
@@ -182,6 +257,7 @@
                     <label for="">New Password</label>
                     <input
                       type="password"
+                      name="new_password" 
                       placeholder="New password"
                       required />
                   </div>
@@ -189,13 +265,20 @@
                     <label for="">Confirm password</label>
                     <input
                       type="password"
+                      name="confirm_password"
                       placeholder="Confirm password"
                       required />
                   </div>
 
                   <div class="submit">
-                    <button type="submit">Save change</button>
+                    <button type="submit" name="change_password">Save change</button>
                   </div>
+                  <?php if (!empty($password_error)) { ?>
+                            <p class="error"><?php echo $password_error ?> </p>
+                        <?php } ?>
+                        <?php if (!empty($success_message)) { ?>
+                            <p class="success"><?php echo $success_message ?> </p>
+                        <?php } ?>
                 </form>
               </div>
             </div>

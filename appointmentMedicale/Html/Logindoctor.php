@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($s_query->num_rows > 0) {
             $result = mysqli_fetch_assoc($s_query);
               // Stockez les informations de l'utilisateur dans la session
-              $_SESSION['user_id'] = $result['id_medcin ']; // Suppose que l'ID de l'utilisateur est stocké dans la colonne 'id' de la table 'patient'
-              $_SESSION['user_email'] = $result['email']; // Stockez d'autres informations de l'utilisateur si nécessaire
+              $_SESSION['medcin_id'] = $result['id_medcin']; // Suppose que l'ID de l'utilisateur est stocké dans la colonne 'id' de la table 'patient'
+              $_SESSION['medcin_email'] = $result['email']; // Stockez d'autres informations de l'utilisateur si nécessaire
 
             header('location:../../appointment Medicale - Doctor/Html/EditInformationDoc.HTml');
         } else {
@@ -100,10 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <a href="#">Doctors <i class="fa-solid fa-chevron-down"></i></a>
                         <div class="Doctors-option">
                             <ul>
-                                <li>
-                                    <a href="./SchduleTiming.HTML">Schedule Timing</a>
-                                </li>
-                                <li><a href="./PatientList.HTML">Patient List</a></li>
+                            <li><a href="./PatientRequet.HTML">Patient Request</a></li>
 
                                 <li>
                                     <a href="./EditInformationDoc.HTml">Profile Setting</a>
@@ -130,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <li>
                                     <a href="../Html/PatientProfile.HTML">Profile Setting</a>
                                 </li>
-                                <li><a href="#">Your Situation</a></li>
+                                <li><a href="../Html/yoursituation.html">Your Situation</a></li>
                             </ul>
                         </div>
                     </li>

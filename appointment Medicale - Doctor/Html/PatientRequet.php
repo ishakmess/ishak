@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +20,37 @@
     <link rel="stylesheet" href="../Css/RequetPatient.CSS" />
     <link rel="stylesheet" href="../Css/scrole.CSS" />
   </head>
+  <?php
+          session_start();
+// Connexion à la base de données
+include("../../appointmentMedicale/Html/connect.php");
+// Requête SQL pour récupérer les rendez-vous du médecin connecté
+$doctor_id =  $_SESSION['medcin_id'] ;
+echo 'id= '.$doctor_id;// ID du médecin connecté, vous devez le récupérer depuis votre session PHP ou votre formulaire de connexion
+
+// Récupérez l'ID du client depuis la session
+$client_id = $_SESSION['client_id'];
+echo 'id= '.$client_id;
+// Requête SQL pour récupérer les champs des patients
+$query = "SELECT tmp_name FROM patient WHERE 	id_patient  = $client_id";
+
+$result_patient_tmp_name = mysqli_query($con,$query);
+$patient_row = mysqli_fetch_assoc($result_patient_tmp_name);
+$patient_name = $patient_row['tmp_name'];
+// Requête SQL pour récupérer le nom du médecin
+$sql_doctor_name = "SELECT name,tmp_name FROM doctor WHERE 	id_medcin = $doctor_id";
+$result_doctor_name = mysqli_query($con, $sql_doctor_name);
+$doctor_row = mysqli_fetch_assoc($result_doctor_name);
+$doctor_name = $doctor_row['name'];
+$result_doctor_tmp_name = mysqli_query($con,$sql_doctor_name);
+$doctor_row = mysqli_fetch_assoc($result_doctor_tmp_name);
+$doctor_tmp_name = $doctor_row['tmp_name']; 
+$query = "SELECT r.id ,r.namepatient, r.age, r.phonenmbr, r.date,r.etatrequete FROM requete r
+          INNER JOIN patient p ON r.client_id  = p.id_patient
+          WHERE r.doctor_id = $doctor_id";
+    
+$result = mysqli_query($con, $query);
+?>
   <body>
     <header>
       <div class="Logo">
@@ -61,11 +95,10 @@
               <a href="#">You <i class="fa-solid fa-chevron-down"></i></a>
               <div class="Doctors-option">
                 <ul>
-                  <li><a href="./SchduleTiming.HTML">Schedule Timing</a></li>
-                  <li><a href="./PatientList.HTML">Patient List</a></li>
+                <li><a href="./PatientRequet.php">Patient Request</a></li>
 
                   <li>
-                    <a href="./EditInformationDoc.HTml">Profile Setting</a>
+                    <a href="./EditInformationDoc.php">Profile Setting</a>
                   </li>
                   <li><a href="./RegisterDoctor.Html">Doctors Register</a></li>
                 </ul>
@@ -144,54 +177,120 @@
           <div class="option-Profile">
             <ul>
               <li>
-                <img src="../../img/doctors profile/doctor1/doctors1.jpg" alt="" />
+               <!-- <img src="../../img/doctors profile/doctor1/doctors1.jpg" alt="" />-->
+              <?php
+            // Vérifie si le champ "tmp_name" existe dans $doctor_row
+            if (isset($doctor_row['tmp_name']) && !empty($doctor_row['tmp_name'])) {
+                // Utilisez la valeur de tmp_name comme source pour l'image
+                $tmp_name = $doctor_row['tmp_name'];
+            } else {
+                // Si tmp_name n'est pas défini ou est vide, utilisez l'image par défaut
+                $tmp_name = "../../img/img_doctor.jpg";
+            }
+            ?>
+            <!-- Affichage de l'image -->
+            <div class="image-container" id="imageContainer">
+                <img id="displayedImage" src="<?php echo htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8'); ?>" alt="Doctor" class="DoCtor-img" />
+            </div>
               </li>
-              <li>
+              <!--<li>
                 <h3>Dr. Darren Elder</h3>
                 <p>BDS, MDS - Oral & Maxillofacial Surgery</p>
-              </li>
+              </li>-->
+              <?php
+    // Affichage du nom du médecin
+    //echo "Nom du médecin connecté : " . $doctor_name ;
+    echo "<h3>Dr. " . $doctor_name . "</h3>";
+
+    
+    ?>
               <li>
-                <a href="./ProfileDoctor.HTML"
+                <a href="./ProfileDoctor.php"
                   ><i class="fa-solid fa-user-tie"></i> Profile</a
                 >
               </li>
               <li>
-                <a href="EditInformationDoc.HTml"
+                <a href="EditInformationDoc.php"
                   ><i class="fas fa-user-cog"></i>Profile Setting</a
                 >
               </li>
-              <li>
-                <a href="./TimeEdit.HTML"
-                  ><i class="fas fa-clock"></i> Timings Setting</a
-                >
-              </li>
-              <li>
-                <a href="./SchduleTiming.HTML"
-                  ><i class="fas fa-clock"></i>Schedule Timings
-                </a>
-              </li>
+            
               <li>
                 <a href="#"
                   ><i class="fas fa-calendar-check"></i> Appointment</a
                 >
               </li>
-              <li>
+             <!-- <li>
                 <a href="./PatientList.HTML"
                   ><i class="fas fa-user-injured"></i> My Patient</a
                 >
-              </li>
+              </li>-->
               <li>
-                <a href="./ChangePassword.HTML"
+                <a href="./ChangePassword.php"
                   ><i class="fas fa-user-injured"></i>Change Password</a
                 >
               </li>
               <li>
-                <a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                <a href="#"id="Quitter"><i class="fas fa-sign-out-alt"></i> Log Out</a>
               </li>
             </ul>
           </div>
           <div class="Content-option">
-         
+          <?php
+                    // Vérifier s'il y a des résultats
+                    if (mysqli_num_rows($result) > 0) {
+                        // Parcourir les résultats et afficher chaque rendez-vous dans le code HTML
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '<div class="Appointment">';
+                            echo '<div class="Requet">';
+                            echo '<div>';
+
+                            // Vérifie si le champ "tmp_name" existe dans $row et n'est pas vide
+                            if (isset($patient_row['tmp_name']) && !empty($patient_row['tmp_name'])) {
+                                // Utilisez la valeur de tmp_name comme source pour l'image
+                                $tmp_name = $patient_row['tmp_name'];
+                            } else {
+                                // Si tmp_name n'est pas défini ou est vide, utilisez l'image par défaut
+                                $tmp_name = "../../img/patientstatique.png";
+                            }
+
+                            // Affichage de l'image
+                            echo '<img id="displayedImage" src="' . htmlspecialchars($tmp_name, ENT_QUOTES, 'UTF-8') . '" alt="Displayed Image" />';
+
+                            echo '</div>';
+                            echo '<div>';
+                            //echo '<h3>' . $row['namepatient'] . '</h3>';
+                            echo '<h3>Name patient : ' . htmlspecialchars($row['namepatient'], ENT_QUOTES, 'UTF-8') . '</h3>';
+                            echo '<p><i class="far fa-clock"></i> ' . htmlspecialchars($row['date'], ENT_QUOTES, 'UTF-8') . '</p>';
+                            echo '<p><i class="fa-solid fa-phone"></i> ' . htmlspecialchars($row['phonenmbr'], ENT_QUOTES, 'UTF-8') . '</p>';
+                            echo '</div>';
+                            echo '<div>';
+                            if (($row['etatrequete'] != "accepté") && ($row['etatrequete'] != "refuser")) {
+                                echo '<div>';
+                                echo '<button>';
+                                echo '<a href="accept.php?id=' . htmlspecialchars($row['id'], ENT_QUOTES, 'UTF-8') . '"> <i class="fa-solid fa-check"></i> Accept</a>';
+                                echo '</button>';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<button>';
+                                echo '<a href="refuse.php?id=' . htmlspecialchars($row['id'], ENT_QUOTES, 'UTF-8') . '"><i class="fa-solid fa-xmark"></i> Refuse</a>';
+                                echo '</button>';
+                                echo '</div>';
+                            }
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    } else {
+                        // Si aucun rendez-vous trouvé, afficher un message approprié
+                        echo "Aucun rendez-vous trouvé.";
+                    }
+
+                    // Fermer la connexion à la base de données
+                    mysqli_close($con);
+                    ?>
+       
+
 
   
          <div class="Appointment">
@@ -300,5 +399,7 @@
       </div>
     </footer>
     <script src="../jS/scrole.Js"></script>
+    <script src="../jS/boitdeConifrmation.Js"></script>
+    <script src="../jS/Uplode.Js"></script>
   </body>
 </html>
